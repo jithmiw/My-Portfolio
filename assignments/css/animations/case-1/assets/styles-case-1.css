@@ -1,0 +1,35 @@
+div {
+    height: 100px;
+    width: 180px;
+    border-radius: 20px;
+    animation: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animation {
+    0% {
+        margin: 0 0 0 0;
+        background-color: blue;
+    }
+    25% {
+        margin: 0 0 0 1024px;
+        background-color: yellow;
+        transform: rotate(360deg);
+    }
+    50% {
+        margin: 400px 0 0 1024px;
+        background-color: red;
+        transform: rotate(540deg);
+    }
+    75% {
+        margin: 400px 0 0 0;
+        background-color: deeppink;
+        transform: rotate(180deg);
+    }
+    100% {
+        margin: 0 0 0 0;
+        background-color: darkorange;
+    }
+}
