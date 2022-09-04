@@ -450,3 +450,56 @@ address div span, address div a {
     margin-bottom: 20px;
     outline: none;
 }
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: #1463F3;
+}
+
+footer > div:first-of-type {
+    margin: 30px 30px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div > div:first-of-type > h1, footer > div > div:first-of-type span {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: white;
+}
+
+footer > div > div:first-of-type span {
+    color: #d1d1d1;
+    font-size: 18px;
+}
+
+footer > div:first-of-type div a {
+    margin-left: 10px;
+}
+
+footer > div:first-of-type div a > i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+footer > div:nth-child(2) {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+footer small {
+    color: white;
+    width: max-content;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
