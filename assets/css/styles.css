@@ -90,3 +90,66 @@ p {
 .menu li {
     padding: 5px 14px;
 }
+
+/* HOME SECTION */
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home-socials {
+    display: flex;
+    margin-top: 20px;
+}
+
+.home-socials a {
+    background-color: white;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+}
+
+.home-socials a:hover {
+    background-color: #d1d8de;
+    transition: 0.3s ease-out;
+}
+
+.home-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-intro span {
+    margin-bottom: 15px;
+}
+
+.home-intro > span:first-child, .home-intro > span:nth-child(3) {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.home-intro > span:first-child, .home-intro > span:nth-child(2) {
+    color: black;
+}
+
+.home-intro > span:nth-child(3), .home-intro > span:nth-child(3) > span {
+    color: #1463F3;
+}
