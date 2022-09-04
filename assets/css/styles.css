@@ -307,3 +307,67 @@ section.skills p:first-of-type {
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* PROJECTS SECTION */
+.container-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: initial;
+}
+
+.swipe-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swipe-slide {
+    overflow: paged-x-controls;
+    display: flex;
+    align-items: center;
+    padding: 0.15rem;
+}
+
+#projects .container-projects img {
+    width: 300px;
+    height: 200px;
+    border-radius: 14px;
+    justify-self: center;
+}
+
+.swipe-slide div:nth-child(2) {
+    margin-left: 50px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    margin-bottom: 5px;
+    color: #84A4FC;
+}
+
+.view-project, .view-more {
+    width: 160px;
+}
+
+#previous, #next {
+    margin: 0 40px 0 40px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+}
+
+#swipe-circles {
+    display: flex;
+    margin-top: 40px;
+}
+
+#swipe-circles i {
+    margin: 0 5px 0 5px;
+    font-weight: bold;
+    font-size: 0.5rem;
+    color: #868E96;
+}
