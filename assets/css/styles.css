@@ -192,3 +192,33 @@ header {
 .home-intro > span:nth-child(3), .home-intro > span:nth-child(3) > span {
     color: #1463F3;
 }
+
+/* ABOUT SECTION */
+section.about .container-img-profile {
+    max-width: 300px;
+}
+
+.container-img-profile {
+    width: 250px;
+    height: 250px;
+    background-image: url("../img/profile-jithmi.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.container-text {
+    width: 70%;
+    padding-left: 5%;
+}
+
+.container-text > div > span:nth-child(1), .container-text > div > span:nth-child(2), .container-text > div > span:nth-child(4) {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.container-text > div > span:nth-child(2) {
+    color: #1463F3;
+}
