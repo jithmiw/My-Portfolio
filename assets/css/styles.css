@@ -266,3 +266,44 @@ section.skills p:first-of-type {
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
+
+/* EDUCATION SECTION */
+.container-education {
+    flex-direction: column;
+}
+
+.edu {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-scl, .col-course {
+    position: relative;
+    min-height: 1px;
+}
+
+.col-scl {
+    padding-right: 20px;
+    width: 313px;
+}
+
+.col-course {
+    padding-left: 20px;
+    max-width: 500px;
+}
+
+#education .edu p > strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#education .edu > .col-scl p, #education .edu p span {
+    color: #5c5c5c;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
