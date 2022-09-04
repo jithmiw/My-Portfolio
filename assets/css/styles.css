@@ -89,6 +89,11 @@ p {
     color: #868E96;
 }
 
+.container-about, .container-icons, .container-education, .container-projects, .container-services, .container-contact {
+    display: flex;
+    margin-top: 50px;
+}
+
 /* NAVBAR STYLING */
 .navbar {
     position: fixed;
