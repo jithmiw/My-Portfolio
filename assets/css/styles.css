@@ -50,6 +50,45 @@ p {
     margin: 0 0 10px;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.btn {
+    padding: 12px 35px;
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border-radius: 50px;
+    color: white;
+    background-color: #1463F3;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.3s ease-out;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.sub-title {
+    font-size: 1.3em;
+    color: #868E96;
+}
+
 /* NAVBAR STYLING */
 .navbar {
     position: fixed;
