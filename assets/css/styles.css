@@ -68,3 +68,25 @@ p {
 .nav-links a {
     color: black;
 }
+
+/* LOGO */
+.logo {
+    font-size: 25px;
+    font-family: 'Segoe UI Semibold', serif;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #1463F3;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
