@@ -371,3 +371,27 @@ h3 {
     font-size: 0.5rem;
     color: #868E96;
 }
+
+/* SERVICES SECTION */
+.container-services .service {
+    width: 280px;
+    /*height: 260px;*/
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .3);
+    margin: 0 20px 0 20px;
+}
+
+.service img {
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+}
+
+.service h5, .service p {
+    margin: 0 15px 20px 15px;
+}
+
+.service h5 {
+    font-size: 18px;
+}
