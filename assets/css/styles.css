@@ -395,3 +395,58 @@ h3 {
 .service h5 {
     font-size: 18px;
 }
+
+/* CONTACT SECTION */
+.container-contact {
+    flex-direction: column;
+}
+
+.container-contact > div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.container-contact address, .container-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contact address {
+    font-style: normal;
+}
+
+address div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+address div i {
+    font-size: 1.5rem;
+    width: 40px;
+    color: #1463F3;
+}
+
+address div span, address div a {
+    font-weight: lighter;
+    font-size: 16px;
+    color: #202020;
+}
+
+.container-contact form button {
+    border: none;
+    width: 170px;
+    margin-top: 0;
+}
+
+.container-contact form > input, .container-contact form > textarea {
+    width: 100%;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 12px 28px;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    outline: none;
+}
