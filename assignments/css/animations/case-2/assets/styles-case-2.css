@@ -1,0 +1,30 @@
+div {
+    width: 10px;
+    height: 10px;
+    border: 2px solid deepskyblue;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes animation {
+    0% {
+        width: 10px;
+        height: 10px;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        border: 10px solid deepskyblue;
+    }
+}
