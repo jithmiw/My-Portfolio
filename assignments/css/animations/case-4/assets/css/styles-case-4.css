@@ -1,0 +1,107 @@
+main {
+    background-image: url("../img/sky.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+main > section {
+    height: 70%;
+    width: 150%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+main > section > div {
+    width: 100%;
+}
+
+main > section > div:first-child {
+    height: 50%;
+    background: url("../img/city.png");
+    background-size: cover;
+    background-position: center;
+
+    animation-name: animation;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+main > section > div:last-child {
+    height: 50%;
+    background: url("../img/road.jpg");
+    background-size: cover;
+    background-position: center;
+
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+main > div:nth-child(2) {
+    width: 310px;
+    height: 132px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 59%;
+    margin: auto;
+    background: url("../img/car.png");
+    background-size: cover;
+    background-position: center;
+}
+
+main > div:nth-child(2) div {
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 69px;
+    margin: auto;
+    background: url("../img/wheel.png");
+    background-size: cover;
+    background-position: center;
+
+    animation-name: wheels-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+main > div:nth-child(2) > div:first-child {
+    left: 22px;
+}
+
+main > div:nth-child(2) > div:last-child {
+    right: 33px;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-15%);
+    }
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+@keyframes wheels-animation {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
