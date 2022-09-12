@@ -482,7 +482,7 @@ footer > div > div:first-of-type > h1, footer > div > div:first-of-type span {
 
 footer > div > div:first-of-type span {
     color: #d1d1d1;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 footer > div:first-of-type div a {
@@ -495,18 +495,18 @@ footer > div:first-of-type div a > i {
 }
 
 footer > div:nth-child(2) {
-    position: relative;
+    display: flex;
     margin-top: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div:nth-child(2) > small:nth-child(2) {
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 footer small {
     color: white;
-    width: max-content;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
 }
