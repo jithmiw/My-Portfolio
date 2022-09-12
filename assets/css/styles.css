@@ -563,4 +563,9 @@ input[type=checkbox] {
     .sub-title {
         font-size: 1.1em;
     }
+
+    /* NAVBAR STYLING */
+    .nav-links a {
+        font-size: 15px;
+    }
 }
