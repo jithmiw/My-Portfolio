@@ -603,4 +603,27 @@ input[type=checkbox] {
         margin-top: 30px;
         padding-left: 0;
     }
+
+    /* SKILLS SECTION */
+    .skills-tools-rows {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .box-icon > .dev-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .container-icons .box-icon {
+        width: 125px;
+        height: 125px;
+        margin-bottom: 10px;
+    }
+
+    section.skills p:first-of-type {
+        margin-top: 8px;
+    }
 }
