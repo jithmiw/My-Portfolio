@@ -568,4 +568,18 @@ input[type=checkbox] {
     .nav-links a {
         font-size: 15px;
     }
+
+    /* HOME SECTION */
+    .logo {
+        font-size: 20px;
+    }
+
+    .hamburger {
+        font-size: 20px;
+    }
+
+    .home-container .home-socials a {
+        margin: 8px;
+        padding: 4px;
+    }
 }
