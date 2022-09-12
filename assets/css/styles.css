@@ -626,4 +626,20 @@ input[type=checkbox] {
     section.skills p:first-of-type {
         margin-top: 8px;
     }
+
+    /* EDUCATION SECTION */
+    .edu {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .col-scl {
+        padding-right: 0;
+    }
+
+    .col-course {
+        padding-left: 10px;
+        margin-top: 10px;
+        padding-bottom: 5px;
+    }
 }
