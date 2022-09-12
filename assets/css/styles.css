@@ -697,4 +697,39 @@ input[type=checkbox] {
     .container-contact > div:nth-child(3) address+div {
         margin-top: 30px;
     }
+
+    /* FOOTER */
+    footer > div:first-of-type {
+        margin: 0;
+        padding: 20px 20px 0 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > div > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > div > div:first-of-type > h1 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+
+    footer > div > div:first-of-type span {
+        font-size: 18px;
+    }
+
+    footer > div > div:nth-child(2) {
+        margin-top: 30px;
+    }
+
+    footer > div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    footer > div:nth-child(2) > small:nth-child(2) {
+        display: none;
+    }
 }
