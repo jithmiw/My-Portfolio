@@ -510,3 +510,16 @@ footer > div:nth-child(2) > small:nth-child(2) {
 footer small {
     color: white;
 }
+
+/* RESPONSIVE NAVBAR MENU */
+/* CHECKBOX HACK */
+input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
