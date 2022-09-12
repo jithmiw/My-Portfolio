@@ -582,4 +582,25 @@ input[type=checkbox] {
         margin: 8px;
         padding: 4px;
     }
+
+    /* ABOUT SECTION */
+    .container-img-profile {
+        width: 230px;
+        height: 230px;
+    }
+
+    .container-text > div > span:nth-child(1), .container-text > div > span:nth-child(2), .container-text > div > span:nth-child(4) {
+        font-size: 1.1rem;
+    }
+
+    .container-about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-text {
+        width: 90%;
+        margin-top: 30px;
+        padding-left: 0;
+    }
 }
