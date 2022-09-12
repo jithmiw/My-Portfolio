@@ -380,6 +380,16 @@ h3 {
     margin: 0 20px 0 20px;
 }
 
+.service {
+    padding-bottom: 10px;
+}
+
+.service:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s ease-out;
+}
+
 .service img {
     width: 60px;
     height: 60px;
