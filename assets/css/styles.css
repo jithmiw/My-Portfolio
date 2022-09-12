@@ -235,6 +235,7 @@ section.about .container-img-profile {
 
 .container-icons {
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -243,17 +244,14 @@ section.about .container-img-profile {
 }
 
 .container-icons .box-icon {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
 }
 
-.skills-row, .tools-row {
-    display: flex;
-    align-items: center;
-}
-
-.skills-row {
-    margin-bottom: 30px;
+.skills-tools-rows {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .box-icon > .dev-icon {
