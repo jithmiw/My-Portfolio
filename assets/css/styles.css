@@ -283,6 +283,7 @@ section.skills p:first-of-type {
 .col-scl, .col-course {
     position: relative;
     min-height: 1px;
+    padding: 0 10px 0 10px;
 }
 
 .col-scl {
@@ -302,7 +303,6 @@ section.skills p:first-of-type {
 
 #education .edu > .col-scl p, #education .edu p span {
     color: #5c5c5c;
-    font-weight: 300;
     font-family: 'Open Sans', sans-serif;
 }
 
