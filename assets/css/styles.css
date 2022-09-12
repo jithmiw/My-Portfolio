@@ -642,4 +642,39 @@ input[type=checkbox] {
         margin-top: 10px;
         padding-bottom: 5px;
     }
+
+    /* PROJECTS SECTION */
+    .swipe-slide {
+        flex-direction: column;
+    }
+
+    .swipe-slide div:nth-child(2) {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects .container-projects img {
+        width: 240px;
+        height: 155px;
+        border-radius: 10px;
+    }
+
+    #previous, #next {
+        font-size: 1.5rem;
+    }
+
+    #previous {
+        margin: 0 15px 0 0;
+    }
+
+    #next {
+        margin: 0 0 0 15px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
 }
