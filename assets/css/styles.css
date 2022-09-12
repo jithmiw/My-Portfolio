@@ -437,9 +437,8 @@ address div i {
 }
 
 address div span, address div a {
-    font-weight: lighter;
     font-size: 16px;
-    color: #202020;
+    color: #4d4c4c;
 }
 
 .container-contact form button {
