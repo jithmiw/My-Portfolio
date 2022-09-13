@@ -733,3 +733,25 @@ input[type=checkbox] {
         display: none;
     }
 }
+
+@media all and (max-width: 375px) {
+    /* HOME SECTION */
+    .home-intro > span:first-child, .home-intro > span:nth-child(3) {
+        font-size: 17px;
+    }
+
+    .home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
+        font-size: 21px;
+    }
+}
+
+@media all and (min-width: 375px) and (max-width: 425px) {
+    /* HOME SECTION */
+    .home-intro > span:first-child, .home-intro > span:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
+        font-size: 25px;
+    }
+}
