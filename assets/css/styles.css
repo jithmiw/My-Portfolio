@@ -821,3 +821,28 @@ input[type=checkbox] {
         font-size: 50px;
     }
 }
+
+@media all and (min-width: 1150px) and (max-width: 1300px) {
+    /* HOME SECTION */
+    .home-intro > span:first-child, .home-intro > span:nth-child(3) {
+        font-size: 50px;
+    }
+
+    .home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
+        font-size: 55px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1300px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu {
+        font-size: 16px;
+    }
+
+    .menu li {
+        padding: 4px 10px;
+    }
+}
