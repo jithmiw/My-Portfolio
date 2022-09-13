@@ -777,3 +777,25 @@ input[type=checkbox] {
         font-size: 32px;
     }
 }
+
+@media all and (min-width: 540px) and (max-width: 620px) {
+    /* HOME SECTION */
+    .home-intro > span:first-child, .home-intro > span:nth-child(3) {
+        font-size: 30px;
+    }
+
+    .home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
+        font-size: 35px;
+    }
+}
+
+@media all and (min-width: 620px) and (max-width: 768px) {
+    /* HOME SECTION */
+    .home-intro > span:first-child, .home-intro > span:nth-child(3) {
+        font-size: 33px;
+    }
+
+    .home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
+        font-size: 38px;
+    }
+}
