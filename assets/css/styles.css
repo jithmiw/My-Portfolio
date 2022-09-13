@@ -115,8 +115,7 @@ p {
 
 /* LOGO */
 .logo {
-    font-size: 25px;
-    font-family: 'Segoe UI Semibold', serif;
+    font-size: 23px;
 }
 
 /* NAVBAR MENU */
@@ -182,7 +181,6 @@ header {
 
 .home-intro > span:first-child, .home-intro > span:nth-child(3) {
     font-size: 3rem;
-    font-weight: lighter;
 }
 
 .home-intro > span:nth-child(2), .home-intro > span:nth-child(3) > span {
