@@ -11,7 +11,7 @@
     <link rel="icon" href="assets/img/shopping-bag.png">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #c2c2c278">
 <header>
     <!--NAVIGATION BAR-->
     <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #054A49">
@@ -45,35 +45,35 @@
 <main>
     <!--CUSTOMERS SECTION-->
     <section id="customers">
-        <div class="container mt-4 mb-4" style="background-color: #c2c2c2">
-            <div class="navbar navbar-expand-lg d-flex justify-content-between">
-                <div class="navbar-brand">
+        <div class="container-fluid mt-4 mb-4">
+            <div class="navbar navbar-expand-lg d-flex justify-content-between" style="background-color: #c2c2c2">
+                <div class="navbar-brand ms-2">
                     <img src="assets/img/customer.png" alt="customer icon" width="25" height="25" class="d-inline-block align-text-top">
                     Customers
                 </div>
-                <form class="d-flex me-0" role="search">
+                <form class="d-flex me-2" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
-            <form class="row g-3 mt-1 me-0 ms-0" style="background-color: #292824">
+            <form class="row g-3 mt-0 me-0 ms-0 bg-white">
                 <div class="col-md-6">
-                    <label for="inputId" class="form-label text-white">Customer ID</label>
+                    <label for="inputId" class="form-label">Customer ID</label>
                     <input type="text" class="form-control" id="inputId" placeholder="C00-001">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputName" class="form-label text-white">Customer Name</label>
+                    <label for="inputName" class="form-label">Customer Name</label>
                     <input type="text" class="form-control" id="inputName" placeholder="Mark">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputAddress" class="form-label text-white">Customer Address</label>
+                    <label for="inputAddress" class="form-label">Customer Address</label>
                     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="inputEmail" class="form-label text-white">Customer Email</label>
+                <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Customer Email</label>
                     <input type="email" class="form-control" id="inputEmail">
                 </div>
-                <div class="d-flex justify-content-center mb-5">
+                <div class="d-flex justify-content-center mt-4 mb-5">
                     <button type="button" class="btn btn-success me-2 ms-2">Save</button>
                     <button type="button" class="btn btn-warning me-2 ms-2">Update</button>
                     <button type="button" class="btn btn-danger me-2 ms-2">Delete</button>
