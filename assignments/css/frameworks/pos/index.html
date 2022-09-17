@@ -42,6 +42,53 @@
         </div>
     </nav>
 </header>
+<main>
+    <!--ORDERS SECTION-->
+    <section id="orders">
+        <div class="container-fluid d-flex flex-column mt-4 mb-4">
+            <div class="d-flex">
+                <div class="d-flex flex-column me-2">
+                    <div class="navbar navbar-expand-lg d-flex justify-content-between"  style="background-color: #c2c2c2">
+                        <div class="navbar-brand ms-2">
+                            <img src="assets/img/invoice.png" alt="invoice icon" width="25" height="25" class="d-inline-block align-text-top">
+                            Invoice Details
+                        </div>
+                    </div>
+                    <form class="row g-3 mt-0 me-0 ms-0 bg-white" style="height: 330px">
+                        <div class="col-md-6">
+                            <label for="inputOrderId" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="inputOrderId" placeholder="D00-001">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="inputDate">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCusId" class="form-label">Customer ID</label>
+                            <select class="form-select" id="inputCusId">
+                                <option selected value="1">C00-001</option>
+                                <option value="2">C00-002</option>
+                                <option value="3">C00-003</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCusName" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="inputCusName" placeholder="Mark" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCusAddress" class="form-label">Customer Address</label>
+                            <input type="text" class="form-control" id="inputCusAddress" placeholder="1234 Main St" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCusEmail" class="form-label">Customer Email</label>
+                            <input type="email" class="form-control" id="inputCusEmail" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
