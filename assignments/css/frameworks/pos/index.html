@@ -85,6 +85,43 @@
                         </div>
                     </form>
                 </div>
+                <div class="d-flex flex-column me-2 ms-2">
+                    <div class="navbar navbar-expand-lg d-flex justify-content-between" style="background-color: #c2c2c2">
+                        <div class="navbar-brand ms-2">
+                            <img src="assets/img/check-list.png" alt="list icon" width="25" height="25" class="d-inline-block align-text-top">
+                            Item Select
+                        </div>
+                    </div>
+                    <form class="row g-3 mt-0 me-0 ms-0 bg-white" style="height: 330px">
+                        <div class="col-md-6">
+                            <label for="inputCode" class="form-label">Item Code</label>
+                            <select class="form-select" id="inputCode">
+                                <option selected value="1">I00-001</option>
+                                <option value="2">I00-002</option>
+                                <option value="3">I00-003</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputDesc" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="inputDesc" placeholder="Chocolate" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPrice" class="form-label">Unit Price</label>
+                            <input type="number" class="form-control" id="inputPrice" placeholder="600.00" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputQtyOnHand" class="form-label">Quantity on Hand</label>
+                            <input type="number" class="form-control" id="inputQtyOnHand" placeholder="500" readonly>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputOrderQty" class="form-label">Order Quantity</label>
+                            <input type="number" class="form-control" id="inputOrderQty" placeholder="0">
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+                            <button class="btn btn-danger" type="button">Add Item</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
