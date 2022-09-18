@@ -1,10 +1,10 @@
 # My-Portfolio
 
-🔗 Sitemap : <a href="https://www.gloomaps.com/zdlPeaWPtC" target="_blank"> https://www.gloomaps.com/zdlPeaWPtC </a>
+🔗 <a href="https://www.gloomaps.com/zdlPeaWPtC" target="_blank">Sitemap</a>
 
-🔗 Wireframe : <a href="https://www.figma.com/file/OzOtHA6fDFKOyzcOjM8OJp/My-Portfolio?node-id=0%3A1" target="_blank"> https://www.figma.com/file/OzOtHA6fDFKOyzcOjM8OJp/My-Portfolio?node-id=0%3A1 </a>
+🔗 <a href="https://www.figma.com/file/OzOtHA6fDFKOyzcOjM8OJp/My-Portfolio?node-id=0%3A1" target="_blank">Wireframe</a>
 
-🔗 Mockup : <a href="https://www.figma.com/file/efog4cu8NiOeXXZSsuNscb/My-Portfolio?node-id=0%3A1" target="_blank"> https://www.figma.com/file/efog4cu8NiOeXXZSsuNscb/My-Portfolio?node-id=0%3A1 </a>
+🔗 <a href="https://www.figma.com/file/efog4cu8NiOeXXZSsuNscb/My-Portfolio?node-id=0%3A1" target="_blank">Mockup</a>
 
 ## LICENSE
 
