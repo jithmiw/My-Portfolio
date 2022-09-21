@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Jithmi Wannakukorala" name="author">
+    <meta content="Point of Sale System" name="description">
+    <meta content="Point of Sale System, POS, HTML, CSS, Bootstrap, JavaScript" name="keywords">
 
+    <title>Real Point of Sale</title>
+    <link href="assets/img/shopping-bag.png" rel="icon">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #c2c2c278">
+<header>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #054A49">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img src="assets/img/shopping-bag-light.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+                Real
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home" style="color: #c2c2c2">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="pages/order.html" style="color: #c2c2c2">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="pages/customer.html" style="color: #c2c2c2">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="pages/item.html" style="color: #c2c2c2">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="pages/order-details.html" style="color: #c2c2c2">Order Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <!--HOME SECTION-->
+    <section id="home">
+        <div class="container-fluid mt-4 mb-4">
+            <div class="d-flex flex-column flex-sm-row">
+                <div class="bg-white ms-sm-2 me-sm-2 mb-3" style="width: 100%">
+                    <div class="navbar navbar-expand-lg d-flex flex-column flex-sm-row justify-content-between" style="background-color: #c2c2c2">
+                        <div class="navbar-brand ms-2 fs-3">Customers</div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-4 mb-4">
+                        <img src="assets/img/customer.png" alt="customer icon" width="70" height="70" class="d-inline-block align-text-top">
+                        <div class="fs-2 text-center">0</div>
+                    </div>
+                </div>
+                <div class="bg-white ms-sm-2 me-sm-2 mb-3" style="width: 100%">
+                    <div class="navbar navbar-expand-lg d-flex flex-column flex-sm-row justify-content-between" style="background-color: #c2c2c2">
+                        <div class="navbar-brand ms-2 fs-3">Items</div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-4 mb-4">
+                        <img src="assets/img/shopping-cart.png" alt="shopping-cart icon" width="70" height="70" class="d-inline-block align-text-top">
+                        <div class="fs-2 text-center">0</div>
+                    </div>
+                </div>
+                <div class="bg-white ms-sm-2 me-sm-2 mb-3" style="width: 100%">
+                    <div class="navbar navbar-expand-lg d-flex flex-column flex-sm-row justify-content-between" style="background-color: #c2c2c2">
+                        <div class="navbar-brand ms-2 fs-3">Orders</div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-4 mb-4">
+                        <img src="assets/img/shopping-bags.png" alt="shopping-bags icon" width="70" height="70" class="d-inline-block align-text-top">
+                        <div class="fs-2 text-center">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="./assets/js/bootstrap.min.js"></script>
 </body>
 </html>
