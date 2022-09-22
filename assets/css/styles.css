@@ -383,7 +383,7 @@ h3 {
 }
 
 .service:hover {
-    background-color: black;
+    background-image: linear-gradient(45deg, black, #1463F3);
     color: white;
     transition: 0.3s ease-out;
 }
@@ -553,15 +553,6 @@ input[type=checkbox] {
 }
 
 @media all and (max-width: 1023px) {
-    /* UTILITIES */
-    h2 {
-        font-size: 1.4em;
-    }
-
-    .sub-title {
-        font-size: 1.1em;
-    }
-
     /* NAVBAR STYLING */
     .nav-links a {
         font-size: 15px;
