@@ -32,7 +32,7 @@
                         <a id="orders-link" class="nav-link active" aria-current="page" href="#orders" style="color: #c2c2c2">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#customers" style="color: #c2c2c2">Customers</a>
+                        <a id="customers-link" class="nav-link active" aria-current="page" href="#customers" style="color: #c2c2c2">Customers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#items" style="color: #c2c2c2">Items</a>
@@ -401,6 +401,11 @@
     $('#orders-link').click(function () {
         $('#orders').css('display', 'block');
         $('#home, #customers, #items, #order-details').css('display', 'none');
+    });
+
+    $('#customers-link').click(function () {
+        $('#customers').css('display', 'block');
+        $('#home, #orders, #items, #order-details').css('display', 'none');
     });
 </script>
 </body>
