@@ -393,6 +393,11 @@
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <script>
+    $(document).ready(function(){
+        $('#home').css('display', 'block');
+        $('#orders, #customers, #items, #order-details').css('display', 'none');
+    });
+
     $('#home-link').click(function () {
         $('#home').css('display', 'block');
         $('#orders, #customers, #items, #order-details').css('display', 'none');
