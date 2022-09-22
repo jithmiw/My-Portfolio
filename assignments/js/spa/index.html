@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home" style="color: #c2c2c2">Home</a>
+                        <a id="home-link" class="nav-link active" aria-current="page" href="#home" style="color: #c2c2c2">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#orders" style="color: #c2c2c2">Orders</a>
@@ -392,5 +392,11 @@
 </main>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
+<script>
+    $('#home-link').click(function () {
+        $('#home').css('display', 'block');
+        $('#orders, #customers, #items, #order-details').css('display', 'none');
+    });
+</script>
 </body>
 </html>
