@@ -732,6 +732,28 @@ input[type=checkbox] {
     }
 }
 
+@media all and (max-width: 400px) {
+    /* UTILITIES */
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .sub-title {
+        font-size: 1.1em;
+    }
+}
+
+@media all and (min-width: 400px) and (max-width: 768px) {
+    /* UTILITIES */
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .sub-title {
+        font-size: 1.3em;
+    }
+}
+
 @media all and (max-width: 375px) {
     /* HOME SECTION */
     .home-intro > span:first-child, .home-intro > span:nth-child(3) {
