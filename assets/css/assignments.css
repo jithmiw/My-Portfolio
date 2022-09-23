@@ -1,0 +1,55 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+section {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.container-assignments {
+    margin-top: 30px;
+}
+
+h2, h3 {
+    font-family: Poppins, sans-serif;
+    display: block;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 1.5em;
+    color: #868E96;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
