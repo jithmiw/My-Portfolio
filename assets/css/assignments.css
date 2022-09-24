@@ -65,3 +65,32 @@ h3{
 .container-assignments > .basics, .container-assignments > .animations {
     grid-template-rows: repeat(2, 1fr);
 }
+
+.assignments .case {
+    background-position: center;
+    background-size: cover;
+    border-radius: 14px;
+    margin: 5px;
+    padding: 63px 0;
+    width: 250px;
+    height: 170px;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    color: transparent;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s ease-out;
+}
+
+.case > h4 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.assignments .case:hover {
+    color: white;
+    background-image: linear-gradient(45deg, #1463F3, black);
+}
