@@ -53,3 +53,15 @@ h3{
     margin-left: 5px;
     margin-bottom: 20px;
 }
+
+/* ASSIGNMENTS */
+.basics, .transitions, .animations, .frameworks {
+    display: grid;
+    margin-bottom: 30px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container-assignments > .basics, .container-assignments > .animations {
+    grid-template-rows: repeat(2, 1fr);
+}
