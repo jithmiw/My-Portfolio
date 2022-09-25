@@ -119,3 +119,12 @@ h3{
 .basics > a:nth-child(6){
     background-image: url("");
 }
+
+/* TRANSITIONS */
+.transitions > a:nth-child(1){
+    background-image: url("");
+}
+
+.transitions > a:nth-child(2){
+    background-image: url("");
+}
