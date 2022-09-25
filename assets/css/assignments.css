@@ -145,3 +145,8 @@ h3{
 .animations > a:nth-child(4){
     background-image: url("");
 }
+
+/* FRAMEWORKS */
+.frameworks > a:nth-child(1){
+    background-image: url("");
+}
