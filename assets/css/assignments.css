@@ -172,3 +172,19 @@ h3{
         font-size: 1.5em;
     }
 }
+
+@media all and (max-width: 850px) {
+    .container-assignments {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .basics, .transitions, .animations, .frameworks {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
