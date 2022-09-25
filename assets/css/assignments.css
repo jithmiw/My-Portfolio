@@ -150,3 +150,25 @@ h3{
 .frameworks > a:nth-child(1){
     background-image: url("");
 }
+
+@media all and (max-width: 400px) {
+    /* UTILITIES */
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (min-width: 400px) and (max-width: 768px) {
+    /* UTILITIES */
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}
