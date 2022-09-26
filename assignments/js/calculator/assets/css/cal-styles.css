@@ -57,3 +57,21 @@ section {
     margin-top: 6px;
     margin-bottom: 3px;
 }
+
+.buttons {
+    display: grid;
+    justify-items: center;
+    padding: 2px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border: 0;
+    width: 65px;
+    height: 65px;
+    margin: 1px;
+}
