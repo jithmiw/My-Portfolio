@@ -76,6 +76,10 @@ section {
     margin: 1px;
 }
 
+#division:hover, #multiplication:hover, #subtraction:hover, #addition:hover, .btn:hover {
+    background-color: #DADADA;
+}
+
 .clear {
     background-color: #ffffff78;
     font-weight: normal;
@@ -93,4 +97,18 @@ section {
     padding-right: 2px;
     border: 0;
     background-color: white;
+}
+
+#division, #multiplication, #subtraction, #addition, #result {
+    background-color: #ffffff78;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+#result {
+    background-color: #8dbfeb;
+}
+
+#result:hover {
+    background-color: #4599DB;
 }
