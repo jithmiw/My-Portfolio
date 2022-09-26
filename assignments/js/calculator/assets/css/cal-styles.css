@@ -75,3 +75,22 @@ section {
     height: 65px;
     margin: 1px;
 }
+
+.clear {
+    background-color: #ffffff78;
+    font-weight: normal;
+    width: 33px;
+}
+
+.display {
+    font-size: 30px;
+    color: black;
+    width: 237px;
+    height: 65px;
+    text-align: right;
+    margin: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 0;
+    background-color: white;
+}
