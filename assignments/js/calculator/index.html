@@ -72,6 +72,19 @@
     $('.clear').on('click', function() {
         $('.display').val('');
     });
+
+    $('#result').on('click', function() {
+        let currentValue = $('.display').val();
+        let length = currentValue.length;
+        let flag = false;
+        let char = currentValue[length-1];
+        if(char == '+' || char == '-' || char == '*' || char == '/')
+            flag = true;
+        if(flag)
+            $('.display').val("ERROR!");
+        else
+            $('.display').val(eval($('.display').val()));
+    });
 </script>
 </body>
 </html>
