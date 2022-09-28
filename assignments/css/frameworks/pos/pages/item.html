@@ -111,6 +111,26 @@
         </div>
     </section>
 </main>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
+<script>
+    var items = [];
+
+    $('#saveItem').on('click', function () {
+        let itemCode = $('#inputCode').val();
+        let description = $('#inputDesc').val();
+        let unitPrice = $('#inputPrice').val();
+        let qtyOnHand = $('#inputQuantity').val();
+
+        var itemObject = {
+            code : itemCode,
+            desc : description,
+            price : unitPrice,
+            quantity : qtyOnHand
+        };
+
+        items.push(itemObject);
+    });
+</script>
 </body>
 </html>
