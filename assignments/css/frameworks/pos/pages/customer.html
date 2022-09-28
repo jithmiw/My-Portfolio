@@ -113,5 +113,24 @@
 </main>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
+<script>
+    var customers = [];
+
+    $('#saveCustomer').on('click', function () {
+        let customerId = $('#inputId').val();
+        let customerName = $('#inputName').val();
+        let customerAddress = $('#inputAddress').val();
+        let customerEmail = $('#inputEmail').val();
+
+        var customerObject = {
+            id : customerId,
+            name : customerName,
+            address : customerAddress,
+            email : customerEmail
+        };
+
+        customers.push(customerObject);
+    });
+</script>
 </body>
 </html>
