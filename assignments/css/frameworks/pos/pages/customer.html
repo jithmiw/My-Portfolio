@@ -130,7 +130,21 @@
         };
 
         customers.push(customerObject);
+        loadAllCustomers();
     });
+
+    $('#viewCustomers').on('click', function () {
+        loadAllCustomers();
+    });
+
+    function loadAllCustomers() {
+        $('#tblCustomer').empty();
+
+        for(var customer of customers){
+            var row = `<tr><th scope="row">${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.email}</td></tr>`;
+            $('#tblCustomer').append(row);
+        }
+    }
 </script>
 </body>
 </html>
