@@ -130,7 +130,21 @@
         };
 
         items.push(itemObject);
+        loadAllItems();
     });
+
+    $('#viewItems').on('click', function () {
+        loadAllItems();
+    });
+
+    function loadAllItems(){
+        $('#tblItem').empty();
+
+        for(var item of items){
+            var row = `<tr><th scope="row">${item.code}</th><td>${item.desc}</td><td>${item.price}</td><td>${item.quantity}</td></tr>`;
+            $('#tblItem').append(row);
+        }
+    }
 </script>
 </body>
 </html>
