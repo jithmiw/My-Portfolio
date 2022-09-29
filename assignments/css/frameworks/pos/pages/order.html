@@ -183,6 +183,28 @@
         </div>
     </section>
 </main>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
+<script>
+    var orders=[];
+
+    $('#addItem').on('click', function () {
+        let itemCode = $('#itemCode').val();
+        let description = $('#desc').val();
+        let unitPrice = $('#price').val();
+        let qty = $('#inputOrderQty').val();
+        let total = parseInt(unitPrice) * parseInt(qty);
+
+        var orderObject = {
+            code : itemCode,
+            desc : description,
+            price : unitPrice,
+            quantity : qty,
+            total : total
+        };
+
+        orders.push(orderObject);
+    });
+</script>
 </body>
 </html>
