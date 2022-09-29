@@ -204,7 +204,17 @@
         };
 
         orders.push(orderObject);
+        loadAllOrders();
     });
+
+    function loadAllOrders(){
+        $('#tblOrders').empty();
+
+        for(var order of orders){
+            var row = `<tr><th scope="row">${order.code}</th><td>${order.desc}</td><td>${order.price}</td><td>${order.quantity}</td><td>${order.total}</td></tr>`;
+            $('#tblOrders').append(row);
+        }
+    }
 </script>
 </body>
 </html>
