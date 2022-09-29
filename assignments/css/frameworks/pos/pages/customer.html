@@ -55,8 +55,8 @@
                     Customers
                 </div>
                 <form class="d-flex ms-2 me-2" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input id="txtSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="btnSearch" class="btn btn-outline-success" type="button">Search</button>
                 </form>
             </div>
             <form class="row g-3 mt-0 me-0 ms-0 bg-white">
@@ -145,6 +145,18 @@
             $('#tblCustomer').append(row);
         }
     }
+
+    $('#btnSearch').on('click', function () {
+        for(var customer of customers){
+            if (customer.id === $('#txtSearch').val()) {
+                $('#inputId').val(customer.id);
+                $('#inputName').val(customer.name);
+                $('#inputAddress').val(customer.address);
+                $('#inputEmail').val(customer.email);
+                return;
+            }
+        }
+    });
 </script>
 </body>
 </html>
