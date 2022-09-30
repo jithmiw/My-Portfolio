@@ -12,6 +12,7 @@ a {
 
 body {
     font-family: sans-serif;
+    background-color: #F4F5F7;
 }
 
 section {
@@ -33,13 +34,19 @@ section {
 }
 
 .container-assignments {
-    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-h2, h3 {
+h2 {
     font-family: Poppins, sans-serif;
     display: block;
     font-weight: bold;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 h2{
@@ -47,31 +54,12 @@ h2{
     text-transform: uppercase;
 }
 
-h3{
-    font-size: 1.5em;
-    color: #868E96;
-    margin-left: 5px;
-    margin-bottom: 20px;
-}
-
 /* ASSIGNMENTS */
-.basics, .transitions, .animations, .frameworks {
-    display: grid;
-    margin-bottom: 30px;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.container-assignments > .basics, .container-assignments > .animations {
-    grid-template-rows: repeat(2, 1fr);
-}
-
 .assignments .case {
     background-position: center;
     background-size: cover;
     border-radius: 14px;
-    margin: 5px;
-    padding: 63px 0;
+    margin: 8px;
     width: 250px;
     height: 170px;
     font-size: 15px;
@@ -80,14 +68,19 @@ h3{
     cursor: pointer;
     user-select: none;
     color: transparent;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     text-align: center;
     transition: 0.3s ease-out;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .3);
 }
 
 .case > h4 {
     font-size: 19px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
 
 .assignments .case:hover {
@@ -96,58 +89,67 @@ h3{
 }
 
 /* BASICS */
-.basics > a:nth-child(1){
+.container-assignments > a:nth-child(1){
     background-image: url("");
 }
 
-.basics > a:nth-child(2){
+.container-assignments > a:nth-child(2){
     background-image: url("");
 }
 
-.basics > a:nth-child(3){
+.container-assignments > a:nth-child(3){
     background-image: url("");
 }
 
-.basics > a:nth-child(4){
+.container-assignments > a:nth-child(4){
     background-image: url("");
 }
 
-.basics > a:nth-child(5){
+.container-assignments > a:nth-child(5){
     background-image: url("");
 }
 
-.basics > a:nth-child(6){
+.container-assignments > a:nth-child(6){
     background-image: url("");
 }
 
 /* TRANSITIONS */
-.transitions > a:nth-child(1){
+.container-assignments > a:nth-child(7){
     background-image: url("");
 }
 
-.transitions > a:nth-child(2){
+.container-assignments > a:nth-child(8){
     background-image: url("");
 }
 
 /* ANIMATIONS */
-.animations > a:nth-child(1){
+.container-assignments > a:nth-child(9){
     background-image: url("");
 }
 
-.animations > a:nth-child(2){
+.container-assignments > a:nth-child(10){
     background-image: url("");
 }
 
-.animations > a:nth-child(3){
+.container-assignments > a:nth-child(11){
     background-image: url("");
 }
 
-.animations > a:nth-child(4){
+.container-assignments > a:nth-child(12){
     background-image: url("");
 }
 
 /* FRAMEWORKS */
-.frameworks > a:nth-child(1){
+.container-assignments > a:nth-child(13){
+    background-image: url("");
+}
+
+/* JAVASCRIPT */
+.container-assignments > a:nth-child(14){
+    background-image: url("");
+}
+
+.container-assignments > a:nth-child(15){
     background-image: url("");
 }
 
@@ -156,10 +158,6 @@ h3{
     h2 {
         font-size: 1.4em;
     }
-
-    h3 {
-        font-size: 1.3em;
-    }
 }
 
 @media all and (min-width: 400px) and (max-width: 768px) {
@@ -167,24 +165,10 @@ h3{
     h2 {
         font-size: 1.6em;
     }
-
-    h3 {
-        font-size: 1.5em;
-    }
 }
 
 @media all and (max-width: 850px) {
     .container-assignments {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .basics, .transitions, .animations, .frameworks {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
     }
 }
