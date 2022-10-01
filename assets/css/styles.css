@@ -217,7 +217,7 @@ section.about .container-img-profile {
     padding-left: 5%;
 }
 
-.container-text > div > span:nth-child(1), .container-text > div > span:nth-child(2), .container-text > div > span:nth-child(4) {
+.container-text > div > span:nth-child(1), .container-text > div > span:nth-child(2), .container-text > div > span:nth-child(3) {
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -243,7 +243,7 @@ section.about .container-img-profile {
 
 .container-icons .box-icon {
     width: 140px;
-    height: 140px;
+    height: 170px;
 }
 
 .skills-tools-rows {
@@ -255,6 +255,7 @@ section.about .container-img-profile {
 .box-icon > .dev-icon {
     width: 80px;
     height: 80px;
+    margin-top: 15px;
 }
 
 section.skills p:first-of-type {
@@ -578,7 +579,7 @@ input[type=checkbox] {
         height: 230px;
     }
 
-    .container-text > div > span:nth-child(1), .container-text > div > span:nth-child(2), .container-text > div > span:nth-child(4) {
+    .container-text > div > span:nth-child(1), .container-text > div > span:nth-child(2), .container-text > div > span:nth-child(3) {
         font-size: 1.1rem;
     }
 
