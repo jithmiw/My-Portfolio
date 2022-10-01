@@ -131,6 +131,7 @@
 
         items.push(itemObject);
         loadAllItems();
+        bindClickEventsToRows();
     });
 
     $('#viewItems').on('click', function () {
@@ -157,6 +158,20 @@
             }
         }
     });
+
+    function bindClickEventsToRows() {
+        $('#tblItem > tr').on('click', function () {
+            let code = $(this).children(':eq(0)').text();
+            let desc = $(this).children(':eq(1)').text();
+            let price = $(this).children(':eq(2)').text();
+            let quantity = $(this).children(':eq(3)').text();
+
+            $('#inputCode').val(code);
+            $('#inputDesc').val(desc);
+            $('#inputPrice').val(price);
+            $('#inputQuantity').val(quantity);
+        });
+    }
 </script>
 </body>
 </html>
