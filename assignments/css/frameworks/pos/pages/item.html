@@ -184,6 +184,19 @@
             $('#inputPrice').focus();
         }
     });
+
+    $('#inputPrice').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#inputQuantity').focus();
+        }
+    });
+
+    $('#inputQuantity').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#saveItem').click();
+            return false;
+        }
+    });
 </script>
 </body>
 </html>
