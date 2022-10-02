@@ -172,6 +172,18 @@
             $('#inputEmail').val(email);
         });
     }
+
+    $('#inputId').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#inputName').focus();
+        }
+    });
+
+    $('#inputName').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#inputAddress').focus();
+        }
+    });
 </script>
 </body>
 </html>
