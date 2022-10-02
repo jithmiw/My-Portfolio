@@ -172,6 +172,18 @@
             $('#inputQuantity').val(quantity);
         });
     }
+
+    $('#inputCode').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#inputDesc').focus();
+        }
+    });
+
+    $('#inputDesc').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#inputPrice').focus();
+        }
+    });
 </script>
 </body>
 </html>
