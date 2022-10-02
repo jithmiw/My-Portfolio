@@ -184,6 +184,19 @@
             $('#inputAddress').focus();
         }
     });
+
+    $('#inputAddress').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#inputEmail').focus();
+        }
+    });
+
+    $('#inputEmail').on('keypress', function (event) {
+        if (event.which === 13) {
+            $('#saveCustomer').click();
+            return false;
+        }
+    });
 </script>
 </body>
 </html>
