@@ -206,6 +206,8 @@
     $('#inputQuantity').on('keypress', function (event) {
         if (event.which === 13) {
             $('#saveItem').click();
+            clearAll();
+            $('#inputCode').focus();
             return false;
         }
     });
