@@ -185,25 +185,31 @@
         });
     }
 
-    $('#inputId').on('keypress', function (event) {
+    $("#inputId, #inputName, #inputAddress, #inputEmail").on('keydown', function (event) {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+        }
+    });
+
+    $('#inputId').on('keydown', function (event) {
         if (event.which === 13) {
             $('#inputName').focus();
         }
     });
 
-    $('#inputName').on('keypress', function (event) {
+    $('#inputName').on('keydown', function (event) {
         if (event.which === 13) {
             $('#inputAddress').focus();
         }
     });
 
-    $('#inputAddress').on('keypress', function (event) {
+    $('#inputAddress').on('keydown', function (event) {
         if (event.which === 13) {
             $('#inputEmail').focus();
         }
     });
 
-    $('#inputEmail').on('keypress', function (event) {
+    $('#inputEmail').on('keydown', function (event) {
         if (event.which === 13) {
             $('#saveCustomer').click();
             clearAll();
