@@ -80,8 +80,8 @@
                     <button type="button" id="saveCustomer" class="btn btn-success mt-1 mb-1 me-sm-2 ms-sm-2">Save</button>
                     <button type="button" class="btn btn-warning mt-1 mb-1 me-sm-2 ms-sm-2">Update</button>
                     <button type="button" class="btn btn-danger mt-1 mb-1 me-sm-2 ms-sm-2">Delete</button>
-                    <button type="button" id="viewCustomers"class="btn btn-info mt-1 mb-1 me-sm-2 ms-sm-2">View All Customers</button>
-                    <button type="button" class="btn btn-secondary mt-1 mb-1 me-sm-2 ms-sm-2">Clear All</button>
+                    <button type="button" id="viewCustomers" class="btn btn-info mt-1 mb-1 me-sm-2 ms-sm-2">View All Customers</button>
+                    <button type="button" id="clearAll" class="btn btn-secondary mt-1 mb-1 me-sm-2 ms-sm-2">Clear All</button>
                 </div>
             </form>
             <table class="table table-bordered table-hover mt-4">
@@ -138,6 +138,10 @@
         loadAllCustomers();
     });
 
+    $('#clearAll').on('click', function () {
+        clearAll();
+    });
+
     function loadAllCustomers() {
         $('#tblCustomer').empty();
 
@@ -145,6 +149,14 @@
             var row = `<tr><th scope="row">${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.email}</td></tr>`;
             $('#tblCustomer').append(row);
         }
+    }
+
+    function clearAll() {
+        $('#txtSearch').val('');
+        $('#inputId').val('');
+        $('#inputName').val('');
+        $('#inputAddress').val('');
+        $('#inputEmail').val('');
     }
 
     $('#btnSearch').on('click', function () {
