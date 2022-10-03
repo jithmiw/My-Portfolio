@@ -185,25 +185,31 @@
         });
     }
 
-    $('#inputCode').on('keypress', function (event) {
+    $("#inputCode, #inputDesc, #inputPrice, #inputQuantity").on('keydown', function (event) {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+        }
+    });
+
+    $('#inputCode').on('keydown', function (event) {
         if (event.which === 13) {
             $('#inputDesc').focus();
         }
     });
 
-    $('#inputDesc').on('keypress', function (event) {
+    $('#inputDesc').on('keydown', function (event) {
         if (event.which === 13) {
             $('#inputPrice').focus();
         }
     });
 
-    $('#inputPrice').on('keypress', function (event) {
+    $('#inputPrice').on('keydown', function (event) {
         if (event.which === 13) {
             $('#inputQuantity').focus();
         }
     });
 
-    $('#inputQuantity').on('keypress', function (event) {
+    $('#inputQuantity').on('keydown', function (event) {
         if (event.which === 13) {
             $('#saveItem').click();
             clearAll();
