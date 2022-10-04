@@ -258,6 +258,14 @@ section.about .container-img-profile {
     margin-top: 15px;
 }
 
+.skills-tools-rows > .box-icon:nth-child(7) > .dev-icon {
+    padding: 3px;
+}
+
+.skills-tools-rows > .box-icon:nth-child(12) > .dev-icon {
+    padding: 4px;
+}
+
 section.skills p:first-of-type {
     line-height: 1.55;
     margin-block-start: 1em;
