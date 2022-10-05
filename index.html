@@ -215,31 +215,34 @@
             <span class="sub-title">What I've Done</span>
             <div class="container-projects">
                 <div class="slideshow-container">
+                    <!------ PROJECT ONE ------>
                     <div class="project-slides fade">
-                        <img alt="" src="assets/img/project-1.jpg">
+                        <img alt="" src="assets/img/project-1.png">
                         <div class="text">
                             <a href="https://github.com/jithmiw">
                                 <h3>Wholesale Management System <i class="fa-solid fa-arrow-up-right-from-square"></i> </h3>
                             </a>
-                            <p class="project-description">Tags: Java, JavaFX, Layered Architecture, Design Patterns</p>
+                            <p class="project-description"><span class="tags">Tags:</span> Java, JavaFX, Layered Architecture, Design Patterns</p>
                         </div>
                     </div>
+                    <!------ PROJECT TWO ------>
                     <div class="project-slides fade">
-                        <img alt="" src="assets/img/project-1.jpg">
+                        <img alt="" src="assets/img/project-1.png">
                         <div class="text">
                             <a href="https://github.com/jithmiw">
                                 <h3>Wholesale Management System <i class="fa-solid fa-arrow-up-right-from-square"></i> </h3>
                             </a>
-                            <p class="project-description">Tags: Java, JavaFX, Layered Architecture, Design Patterns</p>
+                            <p class="project-description"><span class="tags">Tags:</span> Java, JavaFX, Layered Architecture, Design Patterns</p>
                         </div>
                     </div>
+                    <!------ PROJECT THREE ------>
                     <div class="project-slides fade">
-                        <img alt="" src="assets/img/project-1.jpg">
+                        <img alt="" src="assets/img/project-1.png">
                         <div class="text">
                             <a href="https://github.com/jithmiw">
                                 <h3>Wholesale Management System <i class="fa-solid fa-arrow-up-right-from-square"></i> </h3>
                             </a>
-                            <p class="project-description">Tags: Java, JavaFX, Layered Architecture, Design Patterns</p>
+                            <p class="project-description"><span class="tags">Tags:</span> Java, JavaFX, Layered Architecture, Design Patterns</p>
                         </div>
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -345,6 +348,35 @@
     </div>
 </footer>
 <!------ JAVASCRIPT ------>
-<script></script>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // NEXT/PREVIOUS CONTROLS
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // THUMBNAIL IMAGE CONTROLS
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("project-slides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 </body>
 </html>

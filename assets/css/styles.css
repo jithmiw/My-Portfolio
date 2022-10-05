@@ -338,6 +338,10 @@ h3:hover {
     transition: 0.3s ease-out;
 }
 
+.tags {
+    font-weight: bold;
+}
+
 .project-description {
     margin-bottom: 5px;
     color: #ffffff;
