@@ -321,60 +321,26 @@ section.skills p:first-of-type {
     overflow: initial;
 }
 
-.swipe-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.swipe-slide {
-    overflow: paged-x-controls;
-    display: flex;
-    align-items: center;
-    padding: 0.15rem;
-}
-
-#projects .container-projects img {
-    width: 300px;
-    height: 200px;
-    border-radius: 14px;
-    justify-self: center;
-}
-
-.swipe-slide div:nth-child(2) {
-    margin-left: 50px;
+.project-slides img {
+    width: 100%;
+    border-radius: 13px;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
 }
 
 h3 {
-    font-size: 18px;
+    color: black;
     margin-bottom: 10px;
+}
+
+h3:hover {
+    color: #1463f3;
+    transition: 0.3s ease-out;
 }
 
 .project-description {
     margin-bottom: 5px;
-    color: #84A4FC;
-}
-
-.view-project, .view-more {
-    width: 160px;
-}
-
-#previous, #next {
-    margin: 0 40px 0 40px;
-    font-weight: bold;
-    font-size: 2rem;
-    color: black;
-}
-
-#swipe-circles {
-    display: flex;
-    margin-top: 40px;
-}
-
-#swipe-circles i {
-    margin: 0 5px 0 5px;
-    font-weight: bold;
-    font-size: 0.5rem;
-    color: #868E96;
+    color: #ffffff;
 }
 
 /* SERVICES SECTION */
@@ -639,41 +605,6 @@ input[type=checkbox] {
         padding-left: 10px;
         margin-top: 10px;
         padding-bottom: 5px;
-    }
-
-    /* PROJECTS SECTION */
-    .swipe-slide {
-        flex-direction: column;
-    }
-
-    .swipe-slide div:nth-child(2) {
-        margin-top: 20px;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #projects .container-projects img {
-        width: 240px;
-        height: 155px;
-        border-radius: 10px;
-    }
-
-    #previous, #next {
-        font-size: 1.5rem;
-    }
-
-    #previous {
-        margin: 0 15px 0 0;
-    }
-
-    #next {
-        margin: 0 0 0 15px;
-    }
-
-    h3 {
-        font-size: 16px;
     }
 
     /* SERVICES SECTION */
