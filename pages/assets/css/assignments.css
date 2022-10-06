@@ -95,67 +95,67 @@ h2 {
 
 /* BASICS */
 .container-assignments > a:nth-child(1){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/basics-case-1.png");
 }
 
 .container-assignments > a:nth-child(2){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/basics-case-2.png");
 }
 
 .container-assignments > a:nth-child(3){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/basics-case-3.png");
 }
 
 .container-assignments > a:nth-child(4){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/basics-case-4.png");
 }
 
 .container-assignments > a:nth-child(5){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/basics-case-5.png");
 }
 
 .container-assignments > a:nth-child(6){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/basics-case-6.png");
 }
 
 /* TRANSITIONS */
 .container-assignments > a:nth-child(7){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/transitions-case-1.png");
 }
 
 .container-assignments > a:nth-child(8){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/transitions-case-2.png");
 }
 
 /* ANIMATIONS */
 .container-assignments > a:nth-child(9){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/animations-case-1.png");
 }
 
 .container-assignments > a:nth-child(10){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/animations-case-2.png");
 }
 
 .container-assignments > a:nth-child(11){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/animations-case-3.png");
 }
 
 .container-assignments > a:nth-child(12){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/animations-case-4.png");
 }
 
 /* FRAMEWORKS */
 .container-assignments > a:nth-child(13){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/POS-System-Orders.png");
 }
 
 /* JAVASCRIPT */
 .container-assignments > a:nth-child(14){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/calc.png");
 }
 
 .container-assignments > a:nth-child(15){
-    background-image: url("");
+    background-image: url("../img/cases-background-img/POS-System-Home.png");
 }
 
 @media all and (max-width: 400px) {
