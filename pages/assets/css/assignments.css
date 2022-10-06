@@ -49,11 +49,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-h2{
-    font-size: 1.8em;
-    text-transform: uppercase;
-}
-
 /* ASSIGNMENTS */
 .assignments .case {
     background-position: center;
@@ -76,9 +71,19 @@ h2{
     text-align: center;
     transition: 0.3s ease-out;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .3);
+    position: relative;
 }
 
-.case > h4 {
+.case > i {
+    font-size: 19px;
+    color: #a2a2a2;
+    position: absolute;
+    margin: auto;
+    top: 7px;
+    right: 7px;
+}
+
+.case h4 {
     font-size: 19px;
     margin-bottom: 30px;
 }
