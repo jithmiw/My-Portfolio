@@ -95,7 +95,7 @@ p {
 }
 
 /* PRELOADER */
-main > div {
+body > div {
     position: fixed;
     left: 0;
     right: 0;
@@ -104,7 +104,7 @@ main > div {
     background: white;
 }
 
-main > div > div {
+body > div > div {
     width: 320px;
     height: 220px;
     position: absolute;
