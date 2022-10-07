@@ -49,6 +49,30 @@ h2 {
     margin-bottom: 30px;
 }
 
+/* PRELOADER */
+main > div {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+}
+
+main > div > div {
+    width: 320px;
+    height: 220px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../img/Bounce-Bar-Preloader.gif");
+    background-size: cover;
+    background-position: center;
+}
+
 /* ASSIGNMENTS */
 .assignments .case {
     background-position: center;
