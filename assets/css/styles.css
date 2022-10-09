@@ -424,12 +424,18 @@ h3:hover {
 }
 
 /* SERVICES SECTION */
+.container-services {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .container-services .service {
     width: 280px;
     background-color: white;
     border-radius: 14px;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .3);
-    margin: 0 20px 0 20px;
+    margin: 0 25px 0 25px;
 }
 
 .service {
