@@ -431,7 +431,7 @@ h3:hover {
 }
 
 .container-services .service {
-    width: 280px;
+    width: 255px;
     background-color: white;
     border-radius: 14px;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .3);
@@ -864,6 +864,14 @@ input[type=checkbox] {
     .services  .container-services > .service {
         margin: 0 20px 30px 20px;
         width: 250px;
+    }
+}
+
+@media all and (min-width: 900px) and (max-width: 1145px) {
+    /* SERVICES SECTION */
+    .services  .container-services > .service {
+        margin: 0 16px 26px 16px;
+        width: 240px;
     }
 }
 
