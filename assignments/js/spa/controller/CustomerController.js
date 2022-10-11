@@ -1,3 +1,4 @@
+// CRUD OPERATIONS
 $('#saveCustomer').on('click', function () {
     let customerId = $('#inputId').val();
     let customerName = $('#inputName').val();
@@ -7,6 +8,7 @@ $('#saveCustomer').on('click', function () {
     let customer = setCustomer(customerId, customerName, customerAddress, customerEmail);
     customers.push(customer);
     loadAllCustomers();
+    bindClickEventsToRows();
 });
 
 $('#viewCustomers').on('click', function () {
@@ -33,6 +35,17 @@ $('#btnSearch').on('click', function () {
     }
 });
 
+function bindClickEventsToRows() {
+    $('#tblCustomer > tr').on('click', function () {
+        let id = $(this).children(':eq(0)').text();
+        let name = $(this).children(':eq(1)').text();
+        let address = $(this).children(':eq(2)').text();
+        let email = $(this).children(':eq(3)').text();
+
+        setTextFieldValues(id, name, address, email);
+    });
+}
+
 function setTextFieldValues(id, name, address, email) {
     $('#inputId').val(id);
     $('#inputName').val(name);
@@ -48,3 +61,5 @@ function searchCustomer(cusID) {
     }
     return null;
 }
+
+
