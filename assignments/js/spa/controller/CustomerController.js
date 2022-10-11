@@ -125,7 +125,7 @@ function setButtonState(value) {
 
 function clearAllTexts() {
     $('#inputId').focus();
-    $('#inputId, #inputName, #inputAddress, #inputEmail, #txtSearch').val('');
+    $('#inputId, #inputName, #inputAddress, #inputEmail, #txtCusSearch').val('');
     checkValidity();
 }
 
@@ -141,14 +141,15 @@ $('#saveCustomer').on('click', function () {
         let customer = setCustomer(customerId, customerName, customerAddress, customerEmail);
         customers.push(customer);
         loadAllCustomers();
-        bindClickEventsToRows();
-        alert("Customer has been saved");
+        bindClickEventsToCusRows();
         clearAllTexts();
+        alert("Customer record has been saved");
     }
 });
 
 $('#viewCustomers').on('click', function () {
     loadAllCustomers();
+    bindClickEventsToCusRows();
 });
 
 $('#deleteCustomer').on('click', function () {
@@ -158,7 +159,7 @@ $('#deleteCustomer').on('click', function () {
     if (option) {
         if (deleteCustomer(deleteID)) {
             alert("Customer record has been deleted");
-            setTextFieldValues('', '', '', '');
+            setCusTextFieldValues('', '', '', '');
         } else {
             alert("No such customer to delete. please check the id");
         }
@@ -172,15 +173,15 @@ $('#updateCustomer').on('click', function () {
     if (option) {
         if (updateCustomer(customerID)) {
             alert("Customer record has been updated");
-            setTextFieldValues('', '', '', '');
+            setCusTextFieldValues('', '', '', '');
         } else {
             alert("Customer record has not been updated");
         }
     }
 });
 
-$('.clearAll').on('click', function () {
-    setTextFieldValues('', '', '', '');
+$('#clearCusFields').on('click', function () {
+    setCusTextFieldValues('', '', '', '');
 });
 
 function loadAllCustomers() {
@@ -192,18 +193,18 @@ function loadAllCustomers() {
     }
 }
 
-$('#btnSearch').on('click', function () {
-    let typedId = $('#txtSearch').val();
+$('#btnCusSearch').on('click', function () {
+    let typedId = $('#txtCusSearch').val();
     let customer = searchCustomer(typedId);
     if (customer != null) {
-        setTextFieldValues(customer.id, customer.name, customer.address, customer.email);
+        setCusTextFieldValues(customer.id, customer.name, customer.address, customer.email);
     } else {
         alert('No such customer to find. please check the id');
-        setTextFieldValues('', '', '', '');
+        setCusTextFieldValues('', '', '', '');
     }
 });
 
-function bindClickEventsToRows() {
+function bindClickEventsToCusRows() {
     $('#tblCustomer > tr').on('click', function () {
         let id = $(this).children(':eq(0)').text();
         let name = $(this).children(':eq(1)').text();
@@ -217,12 +218,12 @@ function bindClickEventsToRows() {
     });
 }
 
-function setTextFieldValues(id, name, address, email) {
+function setCusTextFieldValues(id, name, address, email) {
     $('#inputId').val(id);
     $('#inputName').val(name);
     $('#inputAddress').val(address);
     $('#inputEmail').val(email);
-    $('#txtSearch').val('');
+    $('#txtCusSearch').val('');
 }
 
 function searchCustomer(cusID) {
@@ -240,7 +241,7 @@ function deleteCustomer(customerID) {
         let indexNumber = customers.indexOf(customer);
         customers.splice(indexNumber, 1);
         loadAllCustomers();
-        bindClickEventsToRows();
+        bindClickEventsToCusRows();
         return true;
     } else {
         return false;
@@ -255,7 +256,7 @@ function updateCustomer(customerID) {
         customer.address = $('#inputAddress').val();
         customer.email = $('#inputEmail').val();
         loadAllCustomers();
-        bindClickEventsToRows();
+        bindClickEventsToCusRows();
         return true;
     } else {
         return false;
