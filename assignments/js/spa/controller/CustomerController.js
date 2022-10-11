@@ -29,6 +29,24 @@ $('#deleteCustomer').on('click', function () {
     }
 });
 
+$('#updateCustomer').on('click', function () {
+    let customerID = $('#inputId').val();
+
+    let option = confirm("Are you sure you want to update this record?");
+    if (option){
+        if (updateCustomer(customerID)) {
+            alert("Customer record has been updated");
+            setTextFieldValues('', '', '', '');
+        } else {
+            alert("Customer record has not been updated");
+        }
+    }
+});
+
+$('.clearAll').on('click', function () {
+    setTextFieldValues('', '', '', '');
+});
+
 function loadAllCustomers() {
     $('#tblCustomer').empty();
 
@@ -63,6 +81,14 @@ function bindClickEventsToRows() {
     });
 }
 
+function setTextFieldValues(id, name, address, email) {
+    $('#inputId').val(id);
+    $('#inputName').val(name);
+    $('#inputAddress').val(address);
+    $('#inputEmail').val(email);
+    $('#txtSearch').val('');
+}
+
 function searchCustomer(cusID) {
     for (let customer of customers) {
         if (customer.id == cusID) {
@@ -78,15 +104,26 @@ function deleteCustomer(customerID) {
         let indexNumber = customers.indexOf(customer);
         customers.splice(indexNumber, 1);
         loadAllCustomers();
+        bindClickEventsToRows();
         return true;
     } else {
         return false;
     }
 }
 
-function setTextFieldValues(id, name, address, email) {
-    $('#inputId').val(id);
-    $('#inputName').val(name);
-    $('#inputAddress').val(address);
-    $('#inputEmail').val(email);
+function updateCustomer(customerID) {
+    let customer = searchCustomer(customerID);
+    if (customer != null) {
+        customer.id = $('#inputId').val();
+        customer.name = $('#inputName').val();
+        customer.address = $('#inputAddress').val();
+        customer.email = $('#inputEmail').val();
+        loadAllCustomers();
+        bindClickEventsToRows();
+        return true;
+    } else {
+        return false;
+    }
 }
+
+
