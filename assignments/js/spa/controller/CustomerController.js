@@ -1,3 +1,134 @@
+// VALIDATIONS
+$('#inputId').focus();
+
+// REGULAR EXPRESSIONS
+const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
+const cusNameRegEx = /^[A-z ]{5,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusEmailRegEx = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+
+let customerValidations = [];
+customerValidations.push({
+    reg: cusIDRegEx,
+    field: $('#inputId'),
+    error: 'Customer ID Pattern is Wrong : C00-001'
+});
+customerValidations.push({
+    reg: cusNameRegEx,
+    field: $('#inputName'),
+    error: 'Customer Name Pattern is Wrong : A-z 5-20'
+});
+customerValidations.push({
+    reg: cusAddressRegEx,
+    field: $('#inputAddress'),
+    error: 'Customer Address Pattern is Wrong : A-z 0-9 ,/'
+});
+customerValidations.push({
+    reg: cusEmailRegEx,
+    field: $('#inputEmail'),
+    error: 'Customer Email Pattern is Wrong : someone@gmail.com'
+});
+
+// DISABLE TAB KEY OF ALL FOUR TEXT FIELDS USING GROUPING SELECTOR IN CSS
+$('#inputId, #inputName, #inputAddress, #inputEmail').on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+$('#inputId, #inputName, #inputAddress, #inputEmail').on('keyup', function (event) {
+    checkValidity();
+});
+
+$('#inputId, #inputName, #inputAddress, #inputEmail').on('blur', function (event) {
+    checkValidity();
+});
+
+$('#inputId').on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusIDRegEx, $('#inputId'))) {
+        $('#inputName').focus();
+    } else {
+        focusText($('#inputId'));
+    }
+});
+
+$('#inputName').on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusNameRegEx, $('#inputName'))) {
+        focusText($('#inputAddress'));
+    }
+});
+
+$('#inputAddress').on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusAddressRegEx, $('#inputAddress'))) {
+        focusText($('#inputEmail'));
+    }
+});
+
+$('#inputEmail').on('keydown', function (event) {
+    if (event.key === "Enter" && check(cusEmailRegEx, $('#inputEmail'))) {
+        $('#saveCustomer').click();
+    }
+});
+
+function checkValidity() {
+    let errorCount = 0;
+    for (let validation of customerValidations) {
+        if (check(validation.reg, validation.field)) {
+            textSuccess(validation.field, '');
+        } else {
+            errorCount = errorCount + 1;
+            setTextError(validation.field, validation.error);
+        }
+    }
+    setButtonState(errorCount);
+}
+
+function check(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue);
+}
+
+function setTextError(txtField, error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField, '');
+    } else {
+        txtField.css('border', '2px solid red');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function textSuccess(txtField, error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField, '');
+    } else {
+        txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function defaultText(txtField, error) {
+    txtField.css('border', '1px solid #ced4da');
+    txtField.parent().children('span').text(error);
+}
+
+function focusText(txtField) {
+    txtField.focus();
+}
+
+function setButtonState(value) {
+    if (value > 0) {
+        $('#saveCustomer').attr('disabled', true);
+    } else {
+        $('#saveCustomer').attr('disabled', false);
+    }
+}
+
+function clearAllTexts() {
+    $('#inputId').focus();
+    $('#inputId, #inputName, #inputAddress, #inputEmail, #txtSearch').val('');
+    checkValidity();
+}
+
 // CRUD OPERATIONS
 $('#saveCustomer').on('click', function () {
     let customerId = $('#inputId').val();
@@ -5,10 +136,15 @@ $('#saveCustomer').on('click', function () {
     let customerAddress = $('#inputAddress').val();
     let customerEmail = $('#inputEmail').val();
 
-    let customer = setCustomer(customerId, customerName, customerAddress, customerEmail);
-    customers.push(customer);
-    loadAllCustomers();
-    bindClickEventsToRows();
+    let option = confirm("Are you sure you want to save this customer?");
+    if (option) {
+        let customer = setCustomer(customerId, customerName, customerAddress, customerEmail);
+        customers.push(customer);
+        loadAllCustomers();
+        bindClickEventsToRows();
+        alert("Customer has been saved");
+        clearAllTexts();
+    }
 });
 
 $('#viewCustomers').on('click', function () {
@@ -19,7 +155,7 @@ $('#deleteCustomer').on('click', function () {
     let deleteID = $('#inputId').val();
 
     let option = confirm("Are you sure you want to delete this record?");
-    if (option){
+    if (option) {
         if (deleteCustomer(deleteID)) {
             alert("Customer record has been deleted");
             setTextFieldValues('', '', '', '');
@@ -33,7 +169,7 @@ $('#updateCustomer').on('click', function () {
     let customerID = $('#inputId').val();
 
     let option = confirm("Are you sure you want to update this record?");
-    if (option){
+    if (option) {
         if (updateCustomer(customerID)) {
             alert("Customer record has been updated");
             setTextFieldValues('', '', '', '');
@@ -50,7 +186,7 @@ $('.clearAll').on('click', function () {
 function loadAllCustomers() {
     $('#tblCustomer').empty();
 
-    for(var customer of customers){
+    for (var customer of customers) {
         var row = `<tr><th scope="row">${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.email}</td></tr>`;
         $('#tblCustomer').append(row);
     }
