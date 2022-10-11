@@ -37,11 +37,11 @@ $('#inputId, #inputName, #inputAddress, #inputEmail').on('keydown', function (ev
 });
 
 $('#inputId, #inputName, #inputAddress, #inputEmail').on('keyup', function (event) {
-    checkValidity();
+    checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
 });
 
 $('#inputId, #inputName, #inputAddress, #inputEmail').on('blur', function (event) {
-    checkValidity();
+    checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
 });
 
 $('#inputId').on('keydown', function (event) {
@@ -70,63 +70,10 @@ $('#inputEmail').on('keydown', function (event) {
     }
 });
 
-function checkValidity() {
-    let errorCount = 0;
-    for (let validation of customerValidations) {
-        if (check(validation.reg, validation.field)) {
-            textSuccess(validation.field, '');
-        } else {
-            errorCount = errorCount + 1;
-            setTextError(validation.field, validation.error);
-        }
-    }
-    setButtonState(errorCount);
-}
-
-function check(regex, txtField) {
-    let inputValue = txtField.val();
-    return regex.test(inputValue);
-}
-
-function setTextError(txtField, error) {
-    if (txtField.val().length <= 0) {
-        defaultText(txtField, '');
-    } else {
-        txtField.css('border', '2px solid red');
-        txtField.parent().children('span').text(error);
-    }
-}
-
-function textSuccess(txtField, error) {
-    if (txtField.val().length <= 0) {
-        defaultText(txtField, '');
-    } else {
-        txtField.css('border', '2px solid green');
-        txtField.parent().children('span').text(error);
-    }
-}
-
-function defaultText(txtField, error) {
-    txtField.css('border', '1px solid #ced4da');
-    txtField.parent().children('span').text(error);
-}
-
-function focusText(txtField) {
-    txtField.focus();
-}
-
-function setButtonState(value) {
-    if (value > 0) {
-        $('#saveCustomer').attr('disabled', true);
-    } else {
-        $('#saveCustomer').attr('disabled', false);
-    }
-}
-
-function clearAllTexts() {
+function clearAllCusTexts() {
     $('#inputId').focus();
     $('#inputId, #inputName, #inputAddress, #inputEmail, #txtCusSearch').val('');
-    checkValidity();
+    checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
 }
 
 // CRUD OPERATIONS
@@ -142,7 +89,7 @@ $('#saveCustomer').on('click', function () {
         customers.push(customer);
         loadAllCustomers();
         bindClickEventsToCusRows();
-        clearAllTexts();
+        clearAllCusTexts();
         alert("Customer record has been saved");
     }
 });

@@ -1,3 +1,81 @@
+// VALIDATIONS
+$('#inputCode').focus();
+
+// REGULAR EXPRESSIONS
+const itmCodeRegEx = /^(I00-)[0-9]{1,3}$/;
+const itmDescRegEx = /[A-z0-9 ]{3,50}/;
+const itmPriceRegEx = /^[0-9]+[.]?[0-9]*$/;
+const itmQtyRegEx = /^\d+$/;
+
+let itemValidations = [];
+itemValidations.push({
+    reg: itmCodeRegEx,
+    field: $('#inputCode'),
+    error: 'Item Code Pattern is Wrong : I00-001'
+});
+itemValidations.push({
+    reg: itmDescRegEx,
+    field: $('#inputDesc'),
+    error: 'Description Pattern is Wrong : A-z 0-9 3-50'
+});
+itemValidations.push({
+    reg: itmPriceRegEx,
+    field: $('#inputPrice'),
+    error: 'Unit Price Pattern is Wrong : 100 or 100.00'
+});
+itemValidations.push({
+    reg: itmQtyRegEx,
+    field: $('#inputQuantity'),
+    error: 'Quantity on Hand Pattern is Wrong : 0-9'
+});
+
+// DISABLE TAB KEY OF ALL FOUR TEXT FIELDS USING GROUPING SELECTOR IN CSS
+$('#inputCode, #inputDesc, #inputPrice, #inputQuantity').on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+$('#inputCode, #inputDesc, #inputPrice, #inputQuantity').on('keyup', function (event) {
+    checkValidity(itemValidations, '#saveItem, #updateItem');
+});
+
+$('#inputCode, #inputDesc, #inputPrice, #inputQuantity').on('blur', function (event) {
+    checkValidity(itemValidations, '#saveItem, #updateItem');
+});
+
+$('#inputCode').on('keydown', function (event) {
+    if (event.key === "Enter" && check(itmCodeRegEx, $('#inputCode'))) {
+        $('#inputDesc').focus();
+    } else {
+        focusText($('#inputCode'));
+    }
+});
+
+$('#inputDesc').on('keydown', function (event) {
+    if (event.key === "Enter" && check(itmDescRegEx, $('#inputDesc'))) {
+        focusText($('#inputPrice'));
+    }
+});
+
+$('#inputPrice').on('keydown', function (event) {
+    if (event.key === "Enter" && check(itmPriceRegEx, $('#inputPrice'))) {
+        focusText($('#inputQuantity'));
+    }
+});
+
+$('#inputQuantity').on('keydown', function (event) {
+    if (event.key === "Enter" && check(itmQtyRegEx, $('#inputQuantity'))) {
+        $('#saveItem').click();
+    }
+});
+
+function clearAllItemTexts() {
+    $('#inputCode').focus();
+    $('#inputCode, #inputDesc, #inputPrice, #inputQuantity, #txtItemSearch').val('');
+    checkValidity(itemValidations, '#saveItem, #updateItem');
+}
+
 // CRUD OPERATIONS
 $('#saveItem').on('click', function () {
     let itemCode = $('#inputCode').val();
@@ -11,7 +89,7 @@ $('#saveItem').on('click', function () {
         items.push(item);
         loadAllItems();
         bindClickEventsToItemRows();
-        clearAllTexts();
+        clearAllItemTexts();
         alert("Item record has been saved");
     }
 });
