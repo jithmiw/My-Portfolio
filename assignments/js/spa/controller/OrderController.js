@@ -58,6 +58,61 @@ function clearItemFields() {
     $('#inputQtyOnHand').val('');
 }
 
+// ADDING ITEMS TO THE TABLE
+var tblOrders=[];
+
+$('#addItem').on('click', function () {
+    if (parseInt($('#inputOrderQty').val()) <= 0 ||
+        parseInt($('#inputOrderQty').val()) > parseInt($('#inputQtyOnHand').val())) {
+        alert("Invalid Quantity");
+        $('#inputOrderQty').focus();
+        return;
+    }
+
+    let itemCode = $('#selectItemCode option:selected').text();
+    let description = $('#desc').val();
+    let unitPrice = parseInt($('#price').val()).toFixed(2);
+    let qty = parseInt($('#inputOrderQty').val());
+    let total = (unitPrice * qty).toFixed(2);
+
+    var orderTM = {
+        code : itemCode,
+        desc : description,
+        price : unitPrice,
+        quantity : qty,
+        total : total
+    };
+
+    for (let order of tblOrders) {
+        var exists = (order.code === itemCode);
+    }
+
+    if (exists) {
+        for (let order of tblOrders) {
+            if (order.code === itemCode) {
+                order.quantity = order.quantity + qty;
+                order.total = (unitPrice * order.quantity).toFixed(2);
+                break;
+            }
+        }
+        loadAllOrders();
+        $('#selectItemCode').focus();
+    } else {
+        tblOrders.push(orderTM);
+        loadAllOrders();
+        $('#selectItemCode').focus();
+    }
+});
+
+function loadAllOrders(){
+    $('#tblOrders').empty();
+
+    for(let order of tblOrders){
+        var row = `<tr><th scope="row">${order.code}</th><td>${order.desc}</td><td>${order.price}</td><td>${order.quantity}</td><td>${order.total}</td></tr>`;
+        $('#tblOrders').append(row);
+    }
+}
+
 // SETTING CURRENT DATE
 Date.prototype.toDateInputValue = (function() {
     var local = new Date(this);
