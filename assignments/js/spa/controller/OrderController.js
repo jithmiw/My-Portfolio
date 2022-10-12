@@ -45,6 +45,7 @@ function getItemCode(el) {
             $('#desc').val(item.desc);
             $('#price').val(item.price);
             $('#inputQtyOnHand').val(item.quantity);
+            $('#inputOrderQty').val('');
             return;
         } else {
             clearItemFields();
@@ -96,12 +97,20 @@ $('#addItem').on('click', function () {
             }
         }
         loadAllOrders();
-        $('#selectItemCode').focus();
+        calculateTotal();
     } else {
         tblOrders.push(orderTM);
         loadAllOrders();
-        $('#selectItemCode').focus();
+        calculateTotal();
     }
+});
+
+$('#inputCash').on('keyup', function (event) {
+    calculateBalance();
+});
+
+$('#inputDiscount').on('keyup', function (event) {
+    setSubTotalAndBalance();
 });
 
 function loadAllOrders(){
@@ -111,6 +120,28 @@ function loadAllOrders(){
         var row = `<tr><th scope="row">${order.code}</th><td>${order.desc}</td><td>${order.price}</td><td>${order.quantity}</td><td>${order.total}</td></tr>`;
         $('#tblOrders').append(row);
     }
+}
+
+function calculateTotal() {
+    var lblTotal = 0;
+    for(let order of tblOrders){
+        lblTotal += parseInt(order.total);
+    }
+    $('#Total').text(lblTotal.toFixed(2));
+    $('#Sub-Total').text(lblTotal.toFixed(2));
+    $('#selectItemCode').focus();
+}
+
+function calculateBalance() {
+    let balance = parseInt($('#inputCash').val()) - parseInt($('#Sub-Total').text());
+    $('#inputBalance').val(balance.toFixed(2));
+}
+
+function setSubTotalAndBalance() {
+    var subTotal = parseInt($('#Total').text()) * ((100 - parseInt($('#inputDiscount').val())) / 100);
+    $('#Sub-Total').text(subTotal.toFixed(2));
+
+    calculateBalance();
 }
 
 // SETTING CURRENT DATE
