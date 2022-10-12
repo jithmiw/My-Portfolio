@@ -40,9 +40,9 @@ $('#inputCode, #inputDesc, #inputPrice, #inputQuantity').on('keyup', function (e
     checkValidity(itemValidations, '#saveItem, #updateItem');
 });
 
-$('#inputCode, #inputDesc, #inputPrice, #inputQuantity').on('blur', function (event) {
-    checkValidity(itemValidations, '#saveItem, #updateItem');
-});
+// $('#inputCode, #inputDesc, #inputPrice, #inputQuantity').on('blur', function (event) {
+//     checkValidity(itemValidations, '#saveItem, #updateItem');
+// });
 
 $('#inputCode').on('keydown', function (event) {
     if (event.key === "Enter" && check(itmCodeRegEx, $('#inputCode'))) {
@@ -89,6 +89,7 @@ $('#saveItem').on('click', function () {
         items.push(item);
         loadAllItems();
         bindClickEventsToItemRows();
+        loadAllItemsForOption();
         clearAllItemTexts();
         alert("Item record has been saved");
     }

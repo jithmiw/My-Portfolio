@@ -40,9 +40,9 @@ $('#inputId, #inputName, #inputAddress, #inputEmail').on('keyup', function (even
     checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
 });
 
-$('#inputId, #inputName, #inputAddress, #inputEmail').on('blur', function (event) {
-    checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
-});
+// $('#inputId, #inputName, #inputAddress, #inputEmail').on('blur', function (event) {
+//     checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
+// });
 
 $('#inputId').on('keydown', function (event) {
     if (event.key === "Enter" && check(cusIDRegEx, $('#inputId'))) {
@@ -89,6 +89,7 @@ $('#saveCustomer').on('click', function () {
         customers.push(customer);
         loadAllCustomers();
         bindClickEventsToCusRows();
+        loadAllCustomersForOption();
         clearAllCusTexts();
         alert("Customer record has been saved");
     }

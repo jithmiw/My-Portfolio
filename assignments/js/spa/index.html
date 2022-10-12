@@ -103,12 +103,8 @@
                             <input type="date" class="form-control" id="inputDate">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputCusId" class="form-label">Customer ID</label>
-                            <select class="form-select" id="inputCusId">
-                                <option selected value="1">C00-001</option>
-                                <option value="2">C00-002</option>
-                                <option value="3">C00-003</option>
-                            </select>
+                            <label for="selectCusId" class="form-label">Customer ID</label>
+                            <select class="form-select" id="selectCusId" onchange="getCusId(this)"></select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputCusName" class="form-label">Customer Name</label>
@@ -133,12 +129,8 @@
                     </div>
                     <form class="row g-3 mt-0 me-0 ms-0 mb-3 mb-lg-0 bg-white" style="height: 100%">
                         <div class="col-md-6">
-                            <label for="itemCode" class="form-label">Item Code</label>
-                            <select class="form-select" id="itemCode">
-                                <option selected value="1">I00-001</option>
-                                <option value="2">I00-002</option>
-                                <option value="3">I00-003</option>
-                            </select>
+                            <label for="selectItemCode" class="form-label">Item Code</label>
+                            <select class="form-select" id="selectItemCode" onchange="getItemCode(this)"></select>
                         </div>
                         <div class="col-md-6">
                             <label for="desc" class="form-label">Description</label>
@@ -404,8 +396,10 @@
 <script src="db/DB.js"></script>
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
 <script src="model/Customer.js"></script>
 <script src="model/Item.js"></script>
+<script src="model/Orders.js"></script>
 <script src="util/validations.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
 <script>
