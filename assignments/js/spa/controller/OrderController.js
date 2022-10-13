@@ -160,7 +160,7 @@ $('#purchaseOrder').on('click', function () {
         $('#selectCusId').focus();
         return;
     }
-    if (parseInt($('#inputBalance').val()) <= 0) {
+    if (parseInt($('#inputBalance').val()) <= 0 || $('#inputBalance').val() === '') {
         alert("Insufficient cash. Please check cash");
         $('#inputCash').focus();
         return;
@@ -174,12 +174,15 @@ $('#purchaseOrder').on('click', function () {
     if (option) {
         let order = setOrder(orderId, orderDate, customerId);
         orders.push(order);
+
+        for (let order of tblOrders) {
+            let orderDtl = setOrderDetail(orderId, order.code, order.quantity, $('#inputDiscount').val());
+            orderDetail.push(orderDtl);
+        }
+
         $('#tblOrders').empty();
-        bindClickEventsToCusRows();
-        loadAllCustomersForOption();
-        clearAllCusTexts();
         clearAllOrderFields();
-        alert("Customer record has been saved");
+        alert("Order has been purchased");
     }
 });
 
