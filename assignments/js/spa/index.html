@@ -370,25 +370,14 @@
                 <thead style="background-color: #008060">
                 <tr>
                     <th scope="col" class="text-white">Order ID</th>
+                    <th scope="col" class="text-white">Date</th>
+                    <th scope="col" class="text-white">Cus. ID</th>
                     <th scope="col" class="text-white">Item Code</th>
-                    <th scope="col" class="text-white">Order Qty.</th>
+                    <th scope="col" class="text-white">Qty.</th>
                     <th scope="col" class="text-white">Discount</th>
                 </tr>
                 </thead>
-                <tbody class="table-light">
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
+                <tbody id="tblOrderDetail" class="table-light"></tbody>
             </table>
         </div>
     </section>
@@ -398,6 +387,7 @@
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
 <script src="controller/OrderController.js"></script>
+<script src="controller/OrderDetailController.js"></script>
 <script src="model/Customer.js"></script>
 <script src="model/Item.js"></script>
 <script src="model/Orders.js"></script>
