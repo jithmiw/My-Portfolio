@@ -56,7 +56,7 @@
                     </div>
                     <div class="d-flex flex-column align-items-center mt-4 mb-4">
                         <img src="assets/img/customer.png" alt="customer icon" width="70" height="70" class="d-inline-block align-text-top">
-                        <div class="fs-2 text-center">0</div>
+                        <div id="noOfCustomers" class="fs-2 text-center">0</div>
                     </div>
                 </div>
                 <div class="bg-white ms-sm-2 me-sm-2 mb-3" style="width: 100%">
@@ -65,7 +65,7 @@
                     </div>
                     <div class="d-flex flex-column align-items-center mt-4 mb-4">
                         <img src="assets/img/shopping-cart.png" alt="shopping-cart icon" width="70" height="70" class="d-inline-block align-text-top">
-                        <div class="fs-2 text-center">0</div>
+                        <div id="noOfItems" class="fs-2 text-center">0</div>
                     </div>
                 </div>
                 <div class="bg-white ms-sm-2 me-sm-2 mb-3" style="width: 100%">
@@ -74,7 +74,7 @@
                     </div>
                     <div class="d-flex flex-column align-items-center mt-4 mb-4">
                         <img src="assets/img/shopping-bags.png" alt="shopping-bags icon" width="70" height="70" class="d-inline-block align-text-top">
-                        <div class="fs-2 text-center">0</div>
+                        <div id="noOfOrders" class="fs-2 text-center">0</div>
                     </div>
                 </div>
             </div>
@@ -383,6 +383,7 @@
     </section>
 </main>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="controller/IndexController.js"></script>
 <script src="db/DB.js"></script>
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
@@ -394,36 +395,5 @@
 <script src="model/OrderDetail.js"></script>
 <script src="util/validations.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#home').css('display', 'block');
-        $('#orders, #customers, #items, #order-details').css('display', 'none');
-    });
-
-    $('#home-link').click(function () {
-        $('#home').css('display', 'block');
-        $('#orders, #customers, #items, #order-details').css('display', 'none');
-    });
-
-    $('#orders-link').click(function () {
-        $('#orders').css('display', 'block');
-        $('#home, #customers, #items, #order-details').css('display', 'none');
-    });
-
-    $('#customers-link').click(function () {
-        $('#customers').css('display', 'block');
-        $('#home, #orders, #items, #order-details').css('display', 'none');
-    });
-
-    $('#items-link').click(function () {
-        $('#items').css('display', 'block');
-        $('#home, #orders, #customers, #order-details').css('display', 'none');
-    });
-
-    $('#orderDetails-link').click(function () {
-        $('#order-details').css('display', 'block');
-        $('#home, #orders, #customers, #items').css('display', 'none');
-    });
-</script>
 </body>
 </html>
