@@ -57,6 +57,7 @@ function clearItemFields() {
     $('#desc').val('');
     $('#price').val('');
     $('#inputQtyOnHand').val('');
+    $('#inputOrderQty').val('');
 }
 
 // ADDING ITEMS TO THE TABLE
@@ -152,6 +153,36 @@ $('#inputDiscount').on('keyup', function (event) {
     setSubTotalAndBalance();
 });
 
+// PURCHASING ORDER
+$('#purchaseOrder').on('click', function () {
+    if ($('#selectCusId').val() === '') {
+        alert("Please select customer id");
+        $('#selectCusId').focus();
+        return;
+    }
+    if (parseInt($('#inputBalance').val()) <= 0) {
+        alert("Insufficient cash. Please check cash");
+        $('#inputCash').focus();
+        return;
+    }
+
+    let orderId = $('#inputOrderId').val();
+    let orderDate = $('#inputDate').val();
+    let customerId = $('#selectCusId option:selected').text();
+
+    let option = confirm("Are you sure you want to purchase this order?");
+    if (option) {
+        let order = setOrder(orderId, orderDate, customerId);
+        orders.push(order);
+        $('#tblOrders').empty();
+        bindClickEventsToCusRows();
+        loadAllCustomersForOption();
+        clearAllCusTexts();
+        clearAllOrderFields();
+        alert("Customer record has been saved");
+    }
+});
+
 function loadAllOrders(){
     $('#tblOrders').empty();
 
@@ -173,13 +204,6 @@ function setQtyOnHand(itemCode, qty, status) {
     }
 }
 
-function setItemSelectValues() {
-    $('#desc').val('');
-    $('#price').val('');
-    $('#inputQtyOnHand').val('');
-    $('#inputOrderQty').val('');
-}
-
 function searchOrder(itemCode) {
     for (let order of tblOrders) {
         if (order.code === itemCode) {
@@ -196,8 +220,8 @@ function calculateTotal() {
     }
     $('#Total').text(lblTotal.toFixed(2));
     $('#Sub-Total').text(lblTotal.toFixed(2));
-    $('select>option:eq(0)').prop('selected', true);
-    setItemSelectValues();
+    $('#selectItemCode>option:eq(0)').prop('selected', true);
+    clearItemFields();
     $('#selectItemCode').focus();
 }
 
@@ -211,6 +235,19 @@ function setSubTotalAndBalance() {
     $('#Sub-Total').text(subTotal.toFixed(2));
 
     calculateBalance();
+}
+
+function clearAllOrderFields() {
+    $('#inputCusName').val('');
+    $('#inputCusAddress').val('');
+    $('#inputCusEmail').val('');
+    clearItemFields();
+    $('#inputCash').val('');
+    $('#inputDiscount').val('');
+    $('#inputBalance').val('');
+    $('#Total').text('0.00');
+    $('#Sub-Total').text('0.00');
+    $('select>option:eq(0)').prop('selected', true);
 }
 
 // SETTING CURRENT DATE
