@@ -71,8 +71,8 @@ $('#inputEmail').on('keydown', function (event) {
 });
 
 function clearAllCusTexts() {
-    $('#inputId').focus();
     $('#inputId, #inputName, #inputAddress, #inputEmail, #txtCusSearch').val('');
+    $('#inputId').focus();
     checkValidity(customerValidations, '#saveCustomer, #updateCustomer');
 }
 

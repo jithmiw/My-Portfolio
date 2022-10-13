@@ -63,7 +63,7 @@ function clearItemFields() {
 var tblOrders=[];
 
 $('#addItem').on('click', function () {
-    if (parseInt($('#inputOrderQty').val()) <= 0 ||
+    if (parseInt($('#inputOrderQty').val()) <= 0 || $('#inputOrderQty').val() === '' ||
         parseInt($('#inputOrderQty').val()) > parseInt($('#inputQtyOnHand').val())) {
         alert("Invalid Quantity");
         $('#inputOrderQty').focus();
@@ -96,12 +96,51 @@ $('#addItem').on('click', function () {
                 break;
             }
         }
+        setQtyOnHand(itemCode ,qty, 'deduct');
         loadAllOrders();
         calculateTotal();
+        if ($('#inputCash').val() !== '' && $('#inputBalance').val() !== '') {
+            calculateBalance();
+        }
+        if ($('#inputDiscount').val() !== '') {
+            setSubTotalAndBalance();
+        }
     } else {
         tblOrders.push(orderTM);
+        setQtyOnHand(itemCode , qty, 'deduct');
         loadAllOrders();
         calculateTotal();
+        if ($('#inputCash').val() !== '' && $('#inputBalance').val() !== '') {
+            calculateBalance();
+        }
+        if ($('#inputDiscount').val() !== '') {
+            setSubTotalAndBalance();
+        }
+    }
+});
+
+// REMOVING ITEMS FROM THE TABLE
+$('#removeItem').on('click', function () {
+    let removeCode = searchOrder($('#selectItemCode option:selected').text());
+
+    let option = confirm("Are you sure you want to remove this item?");
+    if (option) {
+        if (removeCode != null) {
+            let indexNumber = tblOrders.indexOf(removeCode);
+            setQtyOnHand(removeCode.code, removeCode.quantity, 'add');
+            tblOrders.splice(indexNumber, 1);
+            loadAllOrders();
+            alert("Item has been removed");
+            calculateTotal();
+            if ($('#inputCash').val() !== '' && $('#inputBalance').val() !== '') {
+                calculateBalance();
+            }
+            if ($('#inputDiscount').val() !== '') {
+                setSubTotalAndBalance();
+            }
+        } else {
+            alert("No such item to remove. please check the item code");
+        }
     }
 });
 
@@ -122,6 +161,34 @@ function loadAllOrders(){
     }
 }
 
+function setQtyOnHand(itemCode, qty, status) {
+    for (let item of items) {
+        if (item.code === itemCode && status === 'deduct') {
+            item.quantity = parseInt(item.quantity) - qty;
+            return;
+        } else if (item.code === itemCode && status === 'add') {
+            item.quantity = parseInt(item.quantity) + qty;
+            return;
+        }
+    }
+}
+
+function setItemSelectValues() {
+    $('#desc').val('');
+    $('#price').val('');
+    $('#inputQtyOnHand').val('');
+    $('#inputOrderQty').val('');
+}
+
+function searchOrder(itemCode) {
+    for (let order of tblOrders) {
+        if (order.code === itemCode) {
+            return order;
+        }
+    }
+    return null;
+}
+
 function calculateTotal() {
     var lblTotal = 0;
     for(let order of tblOrders){
@@ -129,6 +196,8 @@ function calculateTotal() {
     }
     $('#Total').text(lblTotal.toFixed(2));
     $('#Sub-Total').text(lblTotal.toFixed(2));
+    $('select>option:eq(0)').prop('selected', true);
+    setItemSelectValues();
     $('#selectItemCode').focus();
 }
 

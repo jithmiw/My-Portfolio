@@ -71,8 +71,8 @@ $('#inputQuantity').on('keydown', function (event) {
 });
 
 function clearAllItemTexts() {
-    $('#inputCode').focus();
     $('#inputCode, #inputDesc, #inputPrice, #inputQuantity, #txtItemSearch').val('');
+    $('#inputCode').focus();
     checkValidity(itemValidations, '#saveItem, #updateItem');
 }
 
