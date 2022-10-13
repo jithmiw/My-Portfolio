@@ -182,6 +182,7 @@ $('#purchaseOrder').on('click', function () {
 
         $('#tblOrders').empty();
         clearAllOrderFields();
+        tblOrders = [];
         alert("Order has been purchased");
     }
 });
