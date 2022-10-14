@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('#home').css('display', 'block');
     $('#orders, #customers, #items, #order-details').css('display', 'none');
     setDashboard();
+    setOrderId();
 });
 
 $('#home-link').on('click', function () {

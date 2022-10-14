@@ -155,12 +155,16 @@ $('#inputDiscount').on('keyup', function (event) {
 
 // PURCHASING ORDER
 $('#purchaseOrder').on('click', function () {
-    if ($('#selectCusId').val() === '') {
+    if ($('#selectCusId option:selected').text() === '' || $('#selectCusId option:selected').text() === 'Select Customer ID') {
         alert("Please select customer id");
         $('#selectCusId').focus();
         return;
     }
-    if (parseInt($('#inputBalance').val()) <= 0 || $('#inputBalance').val() === '') {
+    if (tblOrders.length === 0) {
+        alert("Please add items to the table");
+        return;
+    }
+    if (parseInt($('#inputBalance').val()) < 0 || $('#inputBalance').val() === '') {
         alert("Insufficient cash. Please check cash");
         $('#inputCash').focus();
         return;
@@ -183,9 +187,32 @@ $('#purchaseOrder').on('click', function () {
         $('#tblOrders').empty();
         clearAllOrderFields();
         tblOrders = [];
+        setOrderId();
         alert("Order has been purchased");
     }
 });
+
+// GENERATING ORDER ID
+function generateNewOrderId() {
+
+    if (orders.length !== 0) {
+        let lastOrderId = orders[orders.length-1].orderId;
+        let digits = lastOrderId.substring(4);
+        if (orders.length <= 8) {
+            return `OID-00${parseInt(digits)+1}`;
+        } else if (orders.length > 8 && orders.length <= 98) {
+            return `OID-0${parseInt(digits)+1}`;
+        } else if (orders.length > 98) {
+            return `OID-${parseInt(digits)+1}`;
+        }
+    } else {
+        return 'OID-001';
+    }
+}
+
+function setOrderId() {
+    $('#inputOrderId').val(generateNewOrderId());
+}
 
 function loadAllOrders(){
     $('#tblOrders').empty();
@@ -264,3 +291,4 @@ Date.prototype.toDateInputValue = (function() {
 $(document).ready( function() {
     $('#inputDate').val(new Date().toDateInputValue());
 });
+
