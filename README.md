@@ -23,7 +23,7 @@
 
 🔗 <a href="https://www.figma.com/file/HEeqyBpk3KneQqxch6iZQj/Point-of-Sale?node-id=0%3A1" target="_blank">Mockup</a>
 
-🔗 <a href="assignments/js/spa/index.html" target="_blank">View Project</a>
+🔗 <a href="https://jithmiw.github.io/My-Portfolio/assignments/js/spa/index.html" target="_blank">View Project</a>
 
 🔗 <a href="assignments/js/spa" target="_blank">Go to Project Location</a>
 
