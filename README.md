@@ -1,4 +1,4 @@
-# My-Portfolio
+# 🎯My-Portfolio
 
 🔗 <a href="https://www.gloomaps.com/zdlPeaWPtC" target="_blank">Sitemap</a>
 
@@ -15,7 +15,7 @@
 - JavaScript
 - JQuery
 
-# POS-System
+# 🎯POS-System
 
 🔗 <a href="https://www.gloomaps.com/3H6ytmgRyx" target="_blank">Sitemap</a>
 
@@ -30,6 +30,17 @@
 ## Built with
 
 - Bootstrap
+- HTML
+- CSS
+- JavaScript
+- JQuery
+
+# 🎯Calculator
+
+🔗 <a href="https://jithmiw.github.io/My-Portfolio/assignments/js/calculator/index.html" target="_blank">View Project</a>
+
+## Built with
+
 - HTML
 - CSS
 - JavaScript
