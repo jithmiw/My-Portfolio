@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #E65480;
+}
+
+h2 {
+    color: #3EB1A8;
+}
+
+body > main {
+    display: flex;
+}
+
+#container {
+    width: calc(100% / 4 * 3);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 10px;
+}
+
+#container > div {
+    background-image: url("../img/office-man.gif");
+    background-position: center;
+    background-size: cover;
+    width: calc(100% / 6);
+    height: 150px;
+}
+
+#img {
+    background-image: url("../img/building.gif");
+    background-position: center;
+    background-size: cover;
+    width: calc(100% / 4);
+    height: 330px;
+}
+
