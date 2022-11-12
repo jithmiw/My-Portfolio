@@ -16,4 +16,13 @@ function renderQue() {
     cueData.nextPerson();
 }
 
-setInterval(renderQue, 1000);
+let id;
+
+$('#btnStart').click(function () {
+    clearInterval(id);
+    id = setInterval(renderQue, 1000);
+});
+
+$('#btnStop').click(function () {
+    clearInterval(id);
+});
