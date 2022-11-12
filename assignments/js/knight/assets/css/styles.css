@@ -6,6 +6,7 @@ h1 {
     margin-top: 40px;
     text-align: center;
     color: #be7474;
+    font-size: 50px;
 }
 
 body > section > section:nth-child(2) {

@@ -144,18 +144,25 @@ h2 {
     background-image: url("../img/cases-background-img/animations-case-4.png");
 }
 
-/* FRAMEWORKS */
-.container-assignments > a:nth-child(13){
-    background-image: url("../img/cases-background-img/POS-System-Orders.png");
-}
-
 /* JAVASCRIPT */
-.container-assignments > a:nth-child(14){
+.container-assignments > a:nth-child(13){
     background-image: url("../img/cases-background-img/calc.png");
 }
 
+.container-assignments > a:nth-child(14){
+    background-image: url("../img/cases-background-img/POS-System.png");
+}
+
 .container-assignments > a:nth-child(15){
-    background-image: url("../img/cases-background-img/POS-System-Home.png");
+    background-image: url("../img/cases-background-img/javascript-queue-1.png");
+}
+
+.container-assignments > a:nth-child(16){
+    background-image: url("../img/cases-background-img/javascript-queue-2.png");
+}
+
+.container-assignments > a:nth-child(17){
+    background-image: url("../img/cases-background-img/javascript-knight-rider.png");
 }
 
 @media all and (max-width: 400px) {
