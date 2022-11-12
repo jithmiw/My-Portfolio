@@ -36,3 +36,33 @@ body > main {
     height: 330px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+
+button {
+    width: 70px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#btnStart {
+    background-color: green;
+    margin-right: 10px;
+}
+
+#btnStop {
+    background-color: red;
+    margin-left: 10px;
+}
