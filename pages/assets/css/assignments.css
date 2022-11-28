@@ -165,6 +165,10 @@ h2 {
     background-image: url("../img/cases-background-img/javascript-knight-rider.png");
 }
 
+.container-assignments > a:nth-child(18){
+    background-image: url("../img/cases-background-img/game.png");
+}
+
 @media all and (max-width: 400px) {
     /* UTILITIES */
     h2 {
